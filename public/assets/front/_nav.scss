@@ -1,0 +1,31 @@
+.navbar {
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .icon{
+        img{
+            max-height: 50px;
+        }
+    }
+    .menus{
+        margin: 0px !important;
+        li{
+            display: inline-block;
+            margin-left: 50px;
+            font-size: 16px;
+            font-weight: 300;
+            a{
+                text-decoration: none;
+                color: black;
+                padding-left:  15px;
+
+            &:hover{
+            color: red;
+
+            }
+        }
+        }
+    }
+}

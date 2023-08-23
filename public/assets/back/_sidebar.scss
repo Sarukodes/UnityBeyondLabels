@@ -1,0 +1,64 @@
+*{
+    border-radius: 1px solid blue;
+}
+.sidebar
+{
+    border-right: 1px solid #d2d2d2;
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background: #333;
+    color: #fff;
+}
+
+.logo-details {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-details i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.logo_name {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-links {
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-bottom: 10px;
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-left: 4px solid transparent;
+    transition: background 0.3s ease, border-left-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-left-color: #fff;
+}
+
+.active {
+    background: rgba(255, 255, 255, 0.1);
+    border-left-color: #fff;
+}
+
+.small{
+    .dropify-wrapper .dropify-message p {
+        font-size: 1.2rem;
+    }
+}
+
