@@ -33,6 +33,12 @@
                             <span class="links_name">Slider</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="{{ route('admin.services.index') }}" class="">
+                            <i class="fa-solid fa-gear"></i>
+                            <span class="links_name">Service</span>
+                        </a>
+                    </li>
                     <li class="log_out" style="margin-left: 20px">
                         {{-- <a href="{{route('logout')}}"> --}}
                         <i class="fa-solid fa-user"></i>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Front\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -32,10 +33,15 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::match(['GET', 'POST'], 'edit/{slider}', [SliderController::class, 'edit'])->name('edit');
         Route::get('del/{slider}', [SliderController::class, 'del'])->name('del');
     });
+    Route::prefix('services')->name('services.')->group(function(){
+        Route::get('',[ServiceController::class, 'index'])->name('index');
+        Route::match(['GET', 'POST'], 'add', [ServiceController::class, 'add'])->name('add');
+    });
 });
 
 Route::name('front')->name('front.')->group(function () {
     Route::get('', [HomeController::class, 'index'])->name('index');
+    Route::get('/service', [HomeController::class, 'service'])->name('service');
 
 });
 
