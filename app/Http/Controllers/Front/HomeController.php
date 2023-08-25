@@ -10,6 +10,7 @@ class HomeController extends Controller
 {
    public function index(){
     $sliders = DB::table('sliders')->get(['desktop_image','mobile_image','logo', 'title','text','button_text']);
+    // dd($sliders);
     return view('front.home.index', compact('sliders'));
    }
 }

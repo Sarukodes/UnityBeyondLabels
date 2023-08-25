@@ -17,7 +17,7 @@
                 <div class="row">
                     <div class="col-md-6 mb-2 small">
                         <label for="image">Desktop</label>
-                        <input type="file" name="desktop_image" id="image" accept="image/*"
+                        <input type="file" name="desktop_image" accept="image/*" id="desktop_image"
                             class="form-control photo" data-default-file="{{ asset($slider->desktop_image )}}">
                     </div>
 
