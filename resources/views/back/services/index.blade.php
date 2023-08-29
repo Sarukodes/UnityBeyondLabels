@@ -1,6 +1,6 @@
 @extends('back.layout')
 @section('toolbar')
-    <a href="{{ route('admin.services.add') }}" >Add Slider</a>
+    <a href="{{ route('admin.services.add') }}" >Add service</a>
 @endsection
 
 @section('content')
@@ -24,8 +24,8 @@
                         @foreach ($services as $service)
                             <tr>
 
-                                <td>{{ $slider->title }}</td>
-                                <td>{{ $slider->content }}</td>
+                                <td>{{ $service->title }}</td>
+                                <td>{{ $service->content }}</td>
                                 <td>
                                     <img src="{{ asset($service->logo1) }}" alt="" srcset=""
                                         width="70">
@@ -42,13 +42,13 @@
                                     <img src="{{ asset($service->logo4) }}" alt="" srcset=""
                                         width="70">
                                 </td>
-{{--
+
                                 <td>
-                                    <a href="{{ route('admin.slider.edit', ['slider' => $slider->id]) }}"
+                                    <a href="{{ route('admin.services.edit', ['service' => $service->id]) }}"
                                         class="btn btn-primary">Edit</a>
-                                    <a href="{{ route('admin.slider.del', ['slider' => $slider->id]) }}"
+                                    <a href="{{ route('admin.services.del', ['service' => $service->id]) }}"
                                         class="btn btn-danger" onclick="return confirm('Delete')">Delete</a>
-                                </td> --}}
+                                </td>
                             </tr>
                         @endforeach
 

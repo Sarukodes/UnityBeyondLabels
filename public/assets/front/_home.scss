@@ -1,8 +1,8 @@
 .home {
-    .slider-item{
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
+    .slider-item {
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
     }
 }
 .home-text {
@@ -19,10 +19,11 @@
         font-size: 50px;
         font-weight: bold;
         text-align: right;
+
     }
     .button_text {
         border-radius: 25px;
-        border:1.2px solid white;
+        border: 1.2px solid white;
         width: 140px;
         height: 50px;
         background-color: transparent;
@@ -30,10 +31,34 @@
         color: white;
         font-size: 18px;
         font-weight: 400;
-        margin-left:335px;
-        &:hover{
+        margin-left: 335px;
+        &:hover {
             background-color: #ce3959;
             border-color: #ce3959;
+        }
+    }
+}
+.carousel-control-prev-icon {
+    margin-left: -80px;
+}
+.services {
+    .text {
+        padding-left: 80px;
+        padding-bottom: 50px;
+        .line {
+            width: 70%;
+            height: 2.5px;
+            background: linear-gradient(to right, #546071 12%, #DADDE1 10%, #DADDE1 100%);
+        }
+        .title{
+        padding-top: 120px;
+
+
+        }
+        .content {
+            padding-top: 70px;
+            font-weight: 200;
+            font-size: 17px;
         }
     }
 }

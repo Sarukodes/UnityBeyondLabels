@@ -36,12 +36,12 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::prefix('services')->name('services.')->group(function(){
         Route::get('',[ServiceController::class, 'index'])->name('index');
         Route::match(['GET', 'POST'], 'add', [ServiceController::class, 'add'])->name('add');
+        Route::match(['GET', 'POST'], 'edit/{service}', [ServiceController::class, 'edit'])->name('edit');
+        Route::get('del/{service}', [ServiceController::class, 'del'])->name('del');
     });
 });
 
 Route::name('front')->name('front.')->group(function () {
     Route::get('', [HomeController::class, 'index'])->name('index');
-    Route::get('/service', [HomeController::class, 'service'])->name('service');
-
 });
 

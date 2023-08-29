@@ -25,9 +25,40 @@ class ServiceController extends Controller
         } else {
             return view('back.services.add');
         }
-    }
-   public function index(){
+    }   public function index(){
    $services=DB::table('services')->get();
    return view('back.services.index', compact('services'));
    }
+
+   public function edit(Request $request,Service  $service)
+   {
+       if ($request->getMethod() == 'POST') {
+           if ($request->hasFile('logo1')) {
+               $service->logo1 = $request->logo1->store('uploads/services');
+           }
+           if ($request->hasFile('logo2')) {
+               $service->logo2 = $request->logo2->store('uploads/services');
+           }
+           if ($request->hasFile('logo3')) {
+               $service->logo3 = $request->logo3->store('uploads/services');
+           }
+           if ($request->hasFile('logo4')) {
+               $service->logo4 = $request->logo4->store('uploads/services');
+           }
+           $service->title = $request->title;
+           $service->content = $request->content;
+           $service->save();
+           return redirect()->back();
+       } else {
+
+           return view('back.services.edit', compact('service'));
+       }
+   }
+   public function del($service)
+   {
+       DB::table('services')->where('id', $service)->delete();
+       return redirect()->back();
+   }
 }
+
+
