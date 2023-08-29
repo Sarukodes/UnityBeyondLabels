@@ -14,36 +14,23 @@
                             <th>Title</th>
                             <th>Content</th>
                             <th>Logo1</th>
-                            <th>Logo2</th>
-                            <th>Logo3</th>
-                            <th>Logo4</th>
-
+                            <th>text1</th>
+                            <th>text2</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($services as $service)
                             <tr>
-
                                 <td>{{ $service->title }}</td>
                                 <td>{{ $service->content }}</td>
                                 <td>
                                     <img src="{{ asset($service->logo1) }}" alt="" srcset=""
                                         width="70">
                                 </td>
-                                <td>
-                                    <img src="{{ asset($service->logo2) }}" alt="" srcset=""
-                                        width="70">
-                                </td>
-                                <td>
-                                    <img src="{{ asset($service->logo3) }}" alt="" srcset=""
-                                        width="70">
-                                </td>
-                                <td>
-                                    <img src="{{ asset($service->logo4) }}" alt="" srcset=""
-                                        width="70">
-                                </td>
-
-                                <td>
+                                <td>{{ $service->logo1_title }}</td>
+                                <td>{{ $service->logo2_title }}</td>
+                                 <td>
                                     <a href="{{ route('admin.services.edit', ['service' => $service->id]) }}"
                                         class="btn btn-primary">Edit</a>
                                     <a href="{{ route('admin.services.del', ['service' => $service->id]) }}"

@@ -20,6 +20,10 @@ class ServiceController extends Controller
             $service->logo2 = $request->logo2->store('uploads/service');
             $service->logo3 = $request->logo3->store('uploads/service');
             $service->logo4 = $request->logo4->store('uploads/service');
+            $service->logo1_title=$request->logo1_title;
+            $service->logo2_title=$request->logo2_title;
+            $service->logo3_title=$request->logo3_title;
+            $service->logo4_title=$request->logo4_title;
             $service->save();
             return redirect()->back();
         } else {
@@ -47,6 +51,10 @@ class ServiceController extends Controller
            }
            $service->title = $request->title;
            $service->content = $request->content;
+           $service->logo1_title=$request->logo1_title;
+           $service->logo2_title=$request->logo2_title;
+           $service->logo3_title=$request->logo3_title;
+           $service->logo4_title=$request->logo4_title;
            $service->save();
            return redirect()->back();
        } else {

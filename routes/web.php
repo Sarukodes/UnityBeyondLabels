@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\DonationController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Front\HomeController;
@@ -38,6 +39,12 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::match(['GET', 'POST'], 'add', [ServiceController::class, 'add'])->name('add');
         Route::match(['GET', 'POST'], 'edit/{service}', [ServiceController::class, 'edit'])->name('edit');
         Route::get('del/{service}', [ServiceController::class, 'del'])->name('del');
+    });
+    Route::prefix('donation')->name('donation.')->group(function(){
+        Route::get('',[DonationController::class, 'index'])->name('index');
+        Route::match(['GET', 'POST'], 'add', [DonationController::class, 'add'])->name('add');
+        Route::match(['GET', 'POST'], 'edit/{donation}', [DonationController::class, 'edit'])->name('edit');
+        Route::get('del/{donation}', [DonationController::class, 'del'])->name('del');
     });
 });
 

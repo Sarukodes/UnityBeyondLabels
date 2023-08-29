@@ -47,20 +47,34 @@
             </div>
             <div class="col-md-5">
                 <div class="icon p-md-3 p-2 m-0">
-                    <div class="row">
-                        <div class="col-md-6">
-                            logo1
+                    <div class="logo">
+                        <div class="row">
+                            <div class="box col-md-6">
+                                <div class="box1">
+                                    <img src="{{ $service->logo1 }}">
+                                    <span class="logo_title">{{$service->logo1_title}} </span>
+                                </div>
+                            </div>
+                            <div class="box col-md-6">
+                                <div class="box2">
+                                    <img src="{{ $service->logo2 }}">
+                                    <span class="logo_title">{{$service->logo2_title}} </span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            logo2
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            logo3
-                        </div>
-                        <div class="col-md-6">
-                            logo4
+                        <div class="row">
+                            <div class="box col-md-6">
+                                <div class="box3">
+                                    <img src="{{ $service->logo3 }}">
+                                    <span class="logo_title">{{$service->logo3_title}} </span>
+                                </div>
+                            </div>
+                            <div class="box col-md-6">
+                                <div class="box4">
+                                    <img src="{{ $service->logo4 }}">
+                                    <span class="logo_title">{{$service->logo4_title}} </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 

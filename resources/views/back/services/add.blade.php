@@ -20,6 +20,22 @@
                          <label for="content">Content</label>
                          <input type="text" name="content" id="text" class="form-control">
                      </div>
+                     <div class="col-md-3">
+                         <label for="logo1_text">Text1</label>
+                         <input type="text" name="logo1_title" id="text" class="form-control">
+                     </div>
+                     <div class="col-md-3">
+                         <label for="logo2_text">Text2</label>
+                         <input type="text" name="logo2_title" id="text" class="form-control">
+                     </div>
+                     <div class="col-md-3">
+                         <label for="logo3_text">Text3</label>
+                         <input type="text" name="logo3_title" id="text" class="form-control">
+                     </div>
+                     <div class="col-md-3">
+                         <label for="logo4_text">Text4</label>
+                         <input type="text" name="logo4_title" id="text" class="form-control">
+                     </div>
                      <div class="col-md-3 mb-2 small">
                          <label for="logo1">Logo1</label>
                          <input type="file" name="logo1" accept="image/*" id="logo" class="form-control photo"

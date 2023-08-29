@@ -51,7 +51,7 @@
             background: linear-gradient(to right, #546071 12%, #DADDE1 10%, #DADDE1 100%);
         }
         .title{
-        padding-top: 120px;
+        padding-top: 150px;
 
 
         }
@@ -61,4 +61,24 @@
             font-size: 17px;
         }
     }
+    .logo{
+        margin-top: 110px;
+        margin-left: 60px;
+
+    }
+    .box{
+        border: 1px solid #f3f3f3;
+        height: 150px;
+        width: 170px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.2);
+        margin: 15px;
+        position: relative;
+        img{
+            width: 70px;
+        }
+
+}
 }

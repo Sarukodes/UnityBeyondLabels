@@ -53,12 +53,29 @@
   background: linear-gradient(to right, #546071 12%, #DADDE1 10%, #DADDE1 100%);
 }
 .services .text .title {
-  padding-top: 120px;
+  padding-top: 150px;
 }
 .services .text .content {
   padding-top: 70px;
   font-weight: 200;
   font-size: 17px;
+}
+.services .logo {
+  margin-top: 110px;
+  margin-left: 60px;
+}
+.services .box {
+  border: 1px solid #f3f3f3;
+  height: 150px;
+  width: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+}
+.services .box img {
+  width: 70px;
 }
 
 .navbar {
