@@ -13,6 +13,8 @@
                             <th>Text1</th>
                             <th>Text2</th>
                             <th>Text3</th>
+                            <th>QR Image</th>
+                            <th>Background Image</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -23,6 +25,14 @@
                                 <td>{{ $donation->text1 }}</td>
                                 <td>{{ $donation->text2 }}</td>
                                 <td>{{ $donation->text3 }}</td>
+                                <td>
+                                    <img src="{{ asset($donation->image) }}" alt="" srcset=""
+                                    width="70">
+                                </td>
+                                <td>
+                                    <img src="{{ asset($donation->background_image) }}" alt="" srcset=""
+                                    width="70">
+                                </td>
                                 <td>
                                     <a href="{{ route('admin.donation.edit', ['donation' => $donation->id]) }}"
                                         class="btn btn-primary">Edit</a>

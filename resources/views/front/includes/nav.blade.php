@@ -12,8 +12,8 @@
            </a>
        </li>
        <li>
-           <a href="{{ route('front.index') }}" class="">
-               <span class="links_name">About US</span>
+           <a href="#services" class="">
+               <span class="links_name">Services</span>
            </a>
        </li>
        <li class="dropdown">
@@ -21,8 +21,8 @@
                <span class="links_name">Get Involved</span>
            </a>
            <ul class="dropdown-menu">
-               <li><a href="{{ route('front.index') }}">Volunteer</a></li>
-               <li><a href="{{ route('front.index') }}">Events</a></li>
+               <li><a href="#home">Volunteer</a></li>
+               <li><a href="#home">Events</a></li>
            </ul>
        </li>
        <li>
@@ -31,7 +31,7 @@
            </a>
        </li>
        <li>
-           <a href="{{ route('front.index') }}" class="">
+           <a href="#donation" class="">
                <span class="links_name">Donation</span>
            </a>
        </li>

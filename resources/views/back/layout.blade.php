@@ -16,38 +16,38 @@
         <div class="col-md-3">
             <div class="sidebar m-0">
                 <div class="logo-details">
-                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-user "></i>
                     <span class="logo_name">Admin</span>
                 </div>
 
                 <ul class="nav-links">
                     <li>
                         <a href="{{ route('admin.dashboard.index') }}" class="active">
-                            <i class="fa-solid fa-gauge"></i>
+                            <i class="fa-solid fa-gauge me-2"></i>
                             <span class="links_name">Dashboard</span>
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('admin.slider.index') }}" class="">
-                            <i class="fa-solid fa-sliders"></i>
+                            <i class="fa-solid fa-sliders me-2"></i>
                             <span class="links_name">Slider</span>
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('admin.services.index') }}" class="">
-                            <i class="fa-solid fa-gear"></i>
+                            <i class="fa-solid fa-gear me-2"></i>
                             <span class="links_name">Service</span>
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('admin.donation.index') }}" class="">
-                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                            <i class="fa-solid fa-hand-holding-dollar me-2"></i>
                             <span class="links_name">Donation</span>
                         </a>
                     </li>
                     <li class="log_out" style="margin-left: 20px">
                         {{-- <a href="{{route('logout')}}"> --}}
-                        <i class="fa-solid fa-user"></i>
+                        <i class="fa-solid fa-user me-2"></i>
                         <span class="links_name">Log out</span>
                         </a>
                     </li>

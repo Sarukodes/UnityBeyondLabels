@@ -19,7 +19,6 @@
         font-size: 50px;
         font-weight: bold;
         text-align: right;
-
     }
     .button_text {
         border-radius: 25px;
@@ -48,12 +47,15 @@
         .line {
             width: 70%;
             height: 2.5px;
-            background: linear-gradient(to right, #546071 12%, #DADDE1 10%, #DADDE1 100%);
+            background: linear-gradient(
+                to right,
+                #546071 12%,
+                #dadde1 10%,
+                #dadde1 100%
+            );
         }
-        .title{
-        padding-top: 150px;
-
-
+        .title {
+            padding-top: 150px;
         }
         .content {
             padding-top: 70px;
@@ -61,24 +63,55 @@
             font-size: 17px;
         }
     }
-    .logo{
+    .logo {
         margin-top: 110px;
         margin-left: 60px;
-
     }
-    .box{
+    .box {
         border: 1px solid #f3f3f3;
         height: 150px;
         width: 170px;
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         margin: 15px;
-        position: relative;
-        img{
+        font-size: 21px;
+        font-weight: 300;
+        img {
             width: 70px;
+            margin-left: 15px;
         }
-
+        &:hover {
+            background-color: #ce3959;
+            color: white;
+        }
+    }
 }
+.donation {
+    .image-container {
+        margin-bottom: 50px;
+        margin-top: 90px;
+        text-align: right;
+
+        .text {
+            color: #ce3959;
+            padding-top: 100px;
+            padding-right: 80px;
+            .donation-text {
+                border-right: 0.5px solid rgb(87, 85, 85);
+                padding-right: 35px;
+            }
+            .image {
+                padding-right: 80px;
+                img {
+                    width: 220px;
+                }
+            }
+            .goal {
+                padding-top: 50px;
+                padding-left: 150px;
+            }
+        }
+    }
 }

@@ -50,7 +50,7 @@
 .services .text .line {
   width: 70%;
   height: 2.5px;
-  background: linear-gradient(to right, #546071 12%, #DADDE1 10%, #DADDE1 100%);
+  background: linear-gradient(to right, #546071 12%, #dadde1 10%, #dadde1 100%);
 }
 .services .text .title {
   padding-top: 150px;
@@ -73,9 +73,41 @@
   align-items: center;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   margin: 15px;
+  font-size: 21px;
+  font-weight: 300;
 }
 .services .box img {
   width: 70px;
+  margin-left: 15px;
+}
+.services .box:hover {
+  background-color: #ce3959;
+  color: white;
+}
+
+.donation .image-container {
+  margin-bottom: 50px;
+  margin-top: 90px;
+  text-align: right;
+}
+.donation .image-container .text {
+  color: #ce3959;
+  padding-top: 100px;
+  padding-right: 80px;
+}
+.donation .image-container .text .donation-text {
+  border-right: 0.5px solid rgb(87, 85, 85);
+  padding-right: 35px;
+}
+.donation .image-container .text .image {
+  padding-right: 80px;
+}
+.donation .image-container .text .image img {
+  width: 220px;
+}
+.donation .image-container .text .goal {
+  padding-top: 50px;
+  padding-left: 150px;
 }
 
 .navbar {
@@ -83,6 +115,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid rgba(196, 194, 194, 0.1);
 }
 .navbar .icon img {
   max-height: 50px;

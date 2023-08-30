@@ -15,6 +15,8 @@ public function add(Request $request){
         $donation->text1=$request->text1;
         $donation->text2=$request->text2;
         $donation->text3=$request->text3;
+        $donation->image=$request->image->store('uploads/donation');
+        $donation->background_image=$request->background_image->store('uploads/donation');
         $donation->save();
         return redirect()->back();
     }else{
@@ -28,9 +30,15 @@ public function index(){
   public function edit(Request $request,Donation $donation)
   {
     if($request->getMethod()=='POST'){
+        if ($request->hasFile('image')) {
+            $donation->image = $request->image->store('uploads/donations');
+        }
+        if ($request->hasFile('background_image')) {
+            $donation->background_image = $request->background_image->store('uploads/donations');
+        }
         $donation->text1=$request->text1;
         $donation->text2=$request->text2;
-        $donation->text3=$request->text2;
+        $donation->text3=$request->text3;
         $donation->save();
         return redirect()->back();
     }else{

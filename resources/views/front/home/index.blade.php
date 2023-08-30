@@ -4,7 +4,7 @@
 @endsection
 
 @section('content')
-    <section class="home">
+    <section class="home" id="home">
         <div id="carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 @foreach ($sliders as $index => $slider)
@@ -35,53 +35,80 @@
             </button>
         </div>
     </section>
-    <section class="services">
+    <section class="services" id="services">
         <div class="row me-0">
             @foreach ($services as $key => $service)
-            <div class="col-md-7">
+                <div class="col-md-7">
                     <div class="text m-0">
                         <div class="title">{!! $service->title !!}</div>
                         <div class="line"></div>
                         <div class="content">{!! $service->content !!}</div>
                     </div>
-            </div>
-            <div class="col-md-5">
-                <div class="icon p-md-3 p-2 m-0">
-                    <div class="logo">
-                        <div class="row">
-                            <div class="box col-md-6">
-                                <div class="box1">
-                                    <img src="{{ $service->logo1 }}">
-                                    <span class="logo_title">{{$service->logo1_title}} </span>
+                </div>
+                <div class="col-md-5">
+                    <div class="icon p-md-3 p-2 m-0">
+                        <div class="logo">
+                            <div class="row">
+                                <div class="box col-md-6">
+                                    <div class="box1">
+                                        <img src="{{ $service->logo1 }}">
+                                        <div class="logo_title">{{ $service->logo1_title }} </div>
+                                    </div>
+                                </div>
+                                <div class="box col-md-6">
+                                    <div class="box2">
+                                        <img src="{{ $service->logo2 }}">
+                                        <div class="logo_title">{{ $service->logo2_title }} </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="box col-md-6">
-                                <div class="box2">
-                                    <img src="{{ $service->logo2 }}">
-                                    <span class="logo_title">{{$service->logo2_title}} </span>
+                            <div class="row">
+                                <div class="box col-md-6">
+                                    <div class="box3">
+                                        <img src="{{ $service->logo3 }}">
+                                        <div class="logo_title">{{ $service->logo3_title }} </div>
+                                    </div>
+                                </div>
+                                <div class="box col-md-6">
+                                    <div class="box4">
+                                        <img src="{{ $service->logo4 }}">
+                                        <div class="logo_title">{{ $service->logo4_title }} </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="box col-md-6">
-                                <div class="box3">
-                                    <img src="{{ $service->logo3 }}">
-                                    <span class="logo_title">{{$service->logo3_title}} </span>
-                                </div>
-                            </div>
-                            <div class="box col-md-6">
-                                <div class="box4">
-                                    <img src="{{ $service->logo4 }}">
-                                    <span class="logo_title">{{$service->logo4_title}} </span>
-                                </div>
+
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </section>
+    <section class="donation" id="donation">
+        @foreach ($donations as $key => $donation)
+            <div class="image-container"
+                style="background-attachment: fixed;
+                 height: 70vh;
+                 background-size: cover;
+                 background-image:linear-gradient(
+                                180deg,
+                                rgba(12, 11, 11, 0.916),
+                                rgba(11, 10, 10, 0.779)
+                            ),url('{{ asset($donation->background_image) }}')">
+                <div class="container">
+                    <div class=" text row">
+                        <div class="col-md-3 donation-text">  {!! $donation->text1 !!} </div>
+                        <div class="col-md-6 image">
+                        <img src="{{$donation->image}}">
+                        </div>
+                        <div class="col-md-3 goal">
+                                <div class="col-md-6">
+                                    {!! $donation->text3!!}
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-            @endforeach
-        </div>
+        @endforeach
     </section>
 @endsection
 

@@ -27,6 +27,16 @@
                         <label for="content">Text3</label>
                         <input type="text3" name="text3" id="text" class="form-control">
                     </div>
+                    <div class="col-md-4 mb-2 small">
+                        <label for="image">QR Image</label>
+                        <input type="file" name="image" accept="image/*" id="image"
+                            class="form-control photo" required>
+                    </div>
+                    <div class="col-md-5 mb-2 small">
+                        <label for="background_image">Background Image</label>
+                        <input type="file" name="background_image" accept="image/*" id="back_image"
+                            class="form-control photo" required>
+                    </div>
                 </div>
 
         </div>
