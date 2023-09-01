@@ -45,7 +45,13 @@
                             <span class="links_name">Donation</span>
                         </a>
                     </li>
-                    <li class="log_out" style="margin-left: 20px">
+                    <li>
+                        <a href="{{ route('admin.donation.index') }}" class="">
+                            <i class="fa-solid fa-newspaper"></i>
+                            <span class="links_name">News & Events</span>
+                        </a>
+                    </li>
+                    <li class="log_out" style="margin-left: 24px">
                         {{-- <a href="{{route('logout')}}"> --}}
                         <i class="fa-solid fa-user me-2"></i>
                         <span class="links_name">Log out</span>
@@ -71,9 +77,6 @@
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous">
     </script>
     @yield('scripts')
-
 </html>
-
 </body>
-
 </html>

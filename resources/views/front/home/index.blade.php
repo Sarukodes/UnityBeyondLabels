@@ -110,6 +110,20 @@
             </div>
         @endforeach
     </section>
+    <section class="news" id="news">
+            <p class="cursive">LGBT Community</p>
+            <p class="event">News & Events</p>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-6">
+
+                </div>
+              </div>
+            </div>
+    </section>
 @endsection
 
 
