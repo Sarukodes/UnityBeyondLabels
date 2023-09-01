@@ -52,7 +52,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('admin.news.index') }}" class="">
+                        <a href="{{ route('admin.footer.index') }}" class="">
                             <i class="fa-solid fa-shoe-prints"></i>
                             <span class="links_name">Footer</span>
                         </a>

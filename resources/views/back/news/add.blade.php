@@ -13,8 +13,6 @@
             <form action="{{ route('admin.news.add') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="row">
-                </div>
-                <div class="row">
                     <div class="col-md-12">
                         <label for="title">Title</label>
                         <input type="text" name="title" id="title" class="form-control">

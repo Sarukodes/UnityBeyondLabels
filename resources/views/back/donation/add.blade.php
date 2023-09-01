@@ -13,18 +13,16 @@
             <form action="{{ route('admin.donation.add') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="row">
-                </div>
-                <div class="row">
                     <div class="col-md-12">
                         <label for="text1">Text1</label>
                         <input type="text" name="text1" id="title" class="form-control">
                     </div>
                     <div class="col-md-12">
-                        <label for="content">Text2</label>
+                        <label for="Text2">Text2</label>
                         <input type="text2" name="text2" id="text" class="form-control">
                     </div>
                     <div class="col-md-12">
-                        <label for="content">Text3</label>
+                        <label for="Text2">Text3</label>
                         <input type="text3" name="text3" id="text" class="form-control">
                     </div>
                     <div class="col-md-4 mb-2 small">
