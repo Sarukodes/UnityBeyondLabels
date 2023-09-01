@@ -1,6 +1,6 @@
 @extends('back.layout')
 @section('toolbar')
-    <a href="{{ route('admin.donation.add') }}" >Add Donation</a>
+    <a href="{{ route('admin.donation.add') }}">Add Donation</a>
 @endsection
 @section('content')
     <div class="card shadow">
@@ -21,17 +21,15 @@
                     <tbody>
                         @foreach ($donations as $donation)
                             <tr>
-
                                 <td>{{ $donation->text1 }}</td>
                                 <td>{{ $donation->text2 }}</td>
                                 <td>{{ $donation->text3 }}</td>
                                 <td>
-                                    <img src="{{ asset($donation->image) }}" alt="" srcset=""
-                                    width="70">
+                                    <img src="{{ asset($donation->image) }}" alt="" srcset="" width="70">
                                 </td>
                                 <td>
                                     <img src="{{ asset($donation->background_image) }}" alt="" srcset=""
-                                    width="70">
+                                        width="70">
                                 </td>
                                 <td>
                                     <a href="{{ route('admin.donation.edit', ['donation' => $donation->id]) }}"
@@ -41,13 +39,11 @@
                                 </td>
                             </tr>
                         @endforeach
-
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-
     </div>
     </div>
 @endsection

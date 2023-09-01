@@ -51,6 +51,12 @@
                             <span class="links_name">News & Events</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="{{ route('admin.news.index') }}" class="">
+                            <i class="fa-solid fa-shoe-prints"></i>
+                            <span class="links_name">Footer</span>
+                        </a>
+                    </li>
                     <li class="log_out" style="margin-left: 24px">
                         {{-- <a href="{{route('logout')}}"> --}}
                         <i class="fa-solid fa-user me-2"></i>

@@ -170,6 +170,17 @@
   background: linear-gradient(to right, #546071 12%, #dadde1 10%, #dadde1 100%);
 }
 
+.footer {
+  background-color: #1D2024;
+  color: white;
+  padding-top: 40px;
+  margin-top: 50px;
+  padding-left: 20px;
+}
+.footer .contact {
+  font-size: 16px;
+}
+
 .navbar {
   padding: 15px 40px;
   display: flex;
