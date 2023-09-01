@@ -12,40 +12,40 @@
                 <div class="row">
                     <div class="col-md-6">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" class="form-control">
+                        <input type="email" name="email" id="email" class="form-control" value="{{$footer->email}}">
                     </div>
                     <div class="col-md-6">
                         <label for="phoneno">Phoneno</label>
-                        <input type="phoneno" name="phoneno" id="text" class="form-control">
+                        <input type="phoneno" name="phoneno" id="text" class="form-control" value="{{$footer->phoneno}}">
                     </div>
                     <div class="col-md-6">
                         <label for="logo_name">Logo name</label>
-                        <input type="text" name="logo_name" id="logo_name" class="form-control">
+                        <input type="text" name="logo_name" id="logo_name" class="form-control" value="{{$footer->logo_name}}">
                     </div>
                     <div class="col-md-6">
                         <label for="copyright">Copyright</label>
-                        <input type="text" name="copyright" id="Copyright" class="form-control">
+                        <input type="text" name="copyright" id="Copyright" class="form-control" value="{{$footer->copyright}}">
                     </div>
                     <div class="col-md-6">
                         <label for="facebook_link">Facebook Link</label>
-                        <input type="text" name="facebook_link" id="facebook_link" class="form-control">
+                        <input type="text" name="facebook_link" id="facebook_link" class="form-control" value="{{$footer->facebook_link}}">
                     </div>
                     <div class="col-md-6">
                         <label for="twitter_link">Twitter Link</label>
-                        <input type="text" name="twitter_link" id="twitter_link" class="form-control">
+                        <input type="text" name="twitter_link" id="twitter_link" class="form-control" value="{{$footer->twitter_link}}">
                     </div>
                     <div class="col-md-6">
                         <label for="instagram_link">Instagram Link</label>
-                        <input type="text" name="instagram_link" id="instagram_link" class="form-control">
+                        <input type="text" name="instagram_link" id="instagram_link" class="form-control" value="{{$footer->instagram_link}}">
                     </div>
                     <div class="col-md-6">
                         <label for="youtube_link">Youtube Link</label>
-                        <input type="text" name="youtube_link" id="youtube_link" class="form-control" required>
+                        <input type="text" name="youtube_link" id="youtube_link" class="form-control" required value="{{$footer->youtube_link}}">
                     </div>
                     <div class="col-md-4 mb-2 small">
-                        <label for="logo1">Logo Image</label>
-                        <input type="file" name="logo" accept="image/*" id="logo" class="form-control photo"
-                            required>
+                        <label for="image">logo</label>
+                        <input type="file" name="logo" accept="image/*" id="image"
+                            class="form-control photo" data-default-file="{{asset($footer->logo)}}">
                     </div>
                 </div>
         </div>

@@ -16,7 +16,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($footer as $footer)
+                    @foreach ($footers as $footer)
                         <tr>
                             <td>{{$footer->email}}</td>
                             <td>{{$footer->phoneno}}</td>
@@ -24,7 +24,6 @@
                                <img src="{{asset($footer->logo)}}" width="50px">
                             </td>
                             <td>{{$footer->logo_name}}</td>
-
                         <td>
                             <a href="{{ route('admin.footer.edit', ['footer' => $footer->id]) }}"
                                 class="btn btn-primary">Edit</a>

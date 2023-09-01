@@ -29,16 +29,16 @@ class FooterController extends Controller
         }
     }
     public function index(){
-        $footer=DB::table('footers')->get();
-        return view('back.footer.index', compact('footer'));
+        $footers=DB::table('footers')->get();
+        return view('back.footer.index', compact('footers'));
     }
     public function edit(Request $request,  Footer $footer){
         if($request->getMethod()=='POST'){
-            $footer->email=$request->email;
-            $footer->phoneno=$request->phoneno;
-            if($request->hasFile('icon')){
+            if($request->hasFile('logo')){
              $footer->logo=$request->logo->store('uploads/footer');
             }
+            $footer->email=$request->email;
+            $footer->phoneno=$request->phoneno;
             $footer->logo_name=$request->logo_name;
             $footer->facebook_link=$request->facebook_link;
             $footer->youtube_link=$request->youtube_link;
@@ -49,7 +49,7 @@ class FooterController extends Controller
             return redirect()->back();
         }
         else{
-            return view('back.footer.index', compact('footer'));
+            return view('back.footer.edit', compact('footer'));
         }
 
     }

@@ -13,6 +13,7 @@ class HomeController extends Controller
     $services= DB::table('services')->get();
     $donations =DB::table('donations')->get();
     $news =DB::table('news')->get();
-    return view('front.home.index', compact('sliders','services', 'donations', 'news'));
+    $footers =DB::table('footers')->get();
+    return view('front.home.index', compact('sliders','services', 'donations', 'news' ,'footers'));
    }
 }
