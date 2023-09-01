@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\DonationController;
+use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Front\HomeController;
@@ -45,6 +46,12 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::match(['GET', 'POST'], 'add', [DonationController::class, 'add'])->name('add');
         Route::match(['GET', 'POST'], 'edit/{donation}', [DonationController::class, 'edit'])->name('edit');
         Route::get('del/{donation}', [DonationController::class, 'del'])->name('del');
+    });
+    Route::prefix('news')->name('news.')->group(function(){
+        Route::get('',[NewsController::class, 'index'])->name('index');
+        Route::match(['GET', 'POST'], 'add', [NewsController::class, 'add'])->name('add');
+        Route::match(['GET', 'POST'], 'edit/{news}', [NewsController::class, 'edit'])->name('edit');
+        Route::get('del/{news}', [NewsController::class, 'del'])->name('del');
     });
 });
 

@@ -12,6 +12,7 @@ class HomeController extends Controller
     $sliders = DB::table('sliders')->get(['desktop_image','mobile_image','logo', 'title','text','button_text']);
     $services= DB::table('services')->get();
     $donations =DB::table('donations')->get();
-    return view('front.home.index', compact('sliders','services', 'donations'));
+    $news =DB::table('news')->get();
+    return view('front.home.index', compact('sliders','services', 'donations', 'news'));
    }
 }

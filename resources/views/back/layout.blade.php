@@ -46,7 +46,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('admin.donation.index') }}" class="">
+                        <a href="{{ route('admin.news.index') }}" class="">
                             <i class="fa-solid fa-newspaper"></i>
                             <span class="links_name">News & Events</span>
                         </a>
