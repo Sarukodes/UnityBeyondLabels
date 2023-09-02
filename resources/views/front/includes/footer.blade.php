@@ -17,7 +17,7 @@
             </div>
         </div>
         <hr>
-        <div class="nav text-center">
+        <div class="nav">
             <ul class="menus">
                 <li>
                     <a href="{{ route('front.index') }}" class="">
@@ -48,7 +48,7 @@
             </ul>
         </div>
         <div class="copyright">
-            <i class="fa-solid fa-copyright" style="padding-right: 5px"></i>   {{ $footer->copyright }}
+            <i class="fa-solid fa-copyright" style="padding-right: 5px"></i> {{ $footer->copyright }}
         </div>
     @endforeach
 </div>

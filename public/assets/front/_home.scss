@@ -8,6 +8,7 @@
 .home-text {
     color: white;
     padding-top: 120px;
+
     .title {
         font-size: 20px;
         font-family: cursive;
@@ -191,7 +192,6 @@
     padding-left: 22px;
     .contact {
         font-size: 16px;
-
     }
     .logo {
         display: flex;
@@ -214,26 +214,24 @@
             }
         }
     }
-
-    .nav{
-        text-align: center;
-        text-align: center;
-       .menus{
-       margin-top: 50px;
-           li{
-               display: inline-block;
-               margin-right: 75px;
-               a{
-                   text-decoration: none;
-                   color: white;
-                   &:hover{
-                       color: #ce3959;
-                   }
-               }
-           }
-       }
+    .nav {
+        justify-content: center;
+        .menus {
+            margin-top: 50px;
+            li {
+                display: inline-block;
+                margin-right: 75px;
+                a {
+                    text-decoration: none;
+                    color: white;
+                    &:hover {
+                        color: #ce3959;
+                    }
+                }
+            }
+        }
     }
-    .copyright{
+    .copyright {
         text-align: center;
         margin-top: 50px;
         color: #798492;

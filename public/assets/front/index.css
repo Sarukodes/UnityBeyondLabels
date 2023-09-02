@@ -203,8 +203,7 @@
   color: blue;
 }
 .footer .nav {
-  text-align: center;
-  text-align: center;
+  justify-content: center;
 }
 .footer .nav .menus {
   margin-top: 50px;
