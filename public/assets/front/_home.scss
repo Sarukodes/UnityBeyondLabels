@@ -185,7 +185,8 @@
 .footer {
     background-color: #1d2024;
     color: white;
-    padding-top: 40px;
+    padding-top: 50px;
+    padding-bottom: 60px;
     margin-top: 50px;
     padding-left: 22px;
     .contact {
@@ -212,5 +213,30 @@
                 color: blue;
             }
         }
+    }
+
+    .nav{
+        text-align: center;
+        text-align: center;
+       .menus{
+       margin-top: 50px;
+           li{
+               display: inline-block;
+               margin-right: 75px;
+               a{
+                   text-decoration: none;
+                   color: white;
+                   &:hover{
+                       color: #ce3959;
+                   }
+               }
+           }
+       }
+    }
+    .copyright{
+        text-align: center;
+        margin-top: 50px;
+        color: #798492;
+        font-size: 15px;
     }
 }

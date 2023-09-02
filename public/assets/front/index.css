@@ -173,7 +173,8 @@
 .footer {
   background-color: #1d2024;
   color: white;
-  padding-top: 40px;
+  padding-top: 50px;
+  padding-bottom: 60px;
   margin-top: 50px;
   padding-left: 22px;
 }
@@ -200,6 +201,30 @@
 }
 .footer .icon i:hover {
   color: blue;
+}
+.footer .nav {
+  text-align: center;
+  text-align: center;
+}
+.footer .nav .menus {
+  margin-top: 50px;
+}
+.footer .nav .menus li {
+  display: inline-block;
+  margin-right: 75px;
+}
+.footer .nav .menus li a {
+  text-decoration: none;
+  color: white;
+}
+.footer .nav .menus li a:hover {
+  color: #ce3959;
+}
+.footer .copyright {
+  text-align: center;
+  margin-top: 50px;
+  color: #798492;
+  font-size: 15px;
 }
 
 .navbar {

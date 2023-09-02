@@ -5,7 +5,6 @@
            </a>
     </div>
     <ul class="menus">
-
        <li>
            <a href="{{ route('front.index') }}" class="">
                <span class="links_name">Home</span>
@@ -16,7 +15,7 @@
                <span class="links_name">Services</span>
            </a>
        </li>
-       <li class="dropdown">
+       {{-- <li class="dropdown">
            <a href="#" class="active dropdown-toggle" data-bs-toggle="dropdown">
                <span class="links_name">Get Involved</span>
            </a>
@@ -24,12 +23,17 @@
                <li><a href="#home">Volunteer</a></li>
                <li><a href="#home">Events</a></li>
            </ul>
-       </li>
+       </li> --}}
        <li>
-           <a href="{{ route('front.index') }}" class="active">
-           <span class="links_name">Contact</span>
-           </a>
-       </li>
+           <a href="#news" class="active">
+               <span class="links_name">News & Events</span>
+            </a>
+        </li>
+        <li>
+            <a href="{{ route('front.index') }}" class="active">
+            <span class="links_name">Contact</span>
+            </a>
+        </li>
        <li>
            <a href="#donation" class="">
                <span class="links_name">Donation</span>
