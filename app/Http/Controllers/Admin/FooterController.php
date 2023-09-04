@@ -22,6 +22,7 @@ class FooterController extends Controller
             $footer->twitter_link=$request->twitter_link;
             $footer->copyright=$request->copyright;
             $footer->save();
+            $this->makeCache();
             return redirect()->back();
         }
         else{
@@ -46,6 +47,7 @@ class FooterController extends Controller
             $footer->twitter_link=$request->twitter_link;
             $footer->copyright=$request->copyright;
             $footer->save();
+            $this->makeCache();
             return redirect()->back();
         }
         else{
@@ -56,6 +58,14 @@ class FooterController extends Controller
     public function del($footer)
     {
         DB::table('footers')->where('id',$footer)->delete();
+        $this->makeCache();
         return redirect()->back();
+    }
+    public function makeCache(){
+        $footer=DB::table('footers')->first();
+        file_put_contents(
+            resource_path('views\front\cache\home\footer.blade.php'),
+            view('back.footer.template',compact('footer'))->render()
+        );
     }
 }

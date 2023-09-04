@@ -21,6 +21,7 @@ class SliderController extends Controller
             $slider->text = $request->text;
             $slider->button_text = $request->button_text;
             $slider->save();
+            $this->makeCache();
             return redirect()->back();
         } else {
             return view('back.slider.add');
@@ -47,6 +48,8 @@ class SliderController extends Controller
             $slider->text = $request->text;
             $slider->button_text = $request->button_text;
             $slider->save();
+            $this->makeCache();
+
             return redirect()->back();
         } else {
 
@@ -56,6 +59,15 @@ class SliderController extends Controller
     public function del($slider)
     {
         DB::table('sliders')->where('id', $slider)->delete();
+        $this->makeCache();
         return redirect()->back();
+    }
+
+    public function makeCache(){
+        $sliders=DB::table('sliders')->get();
+        file_put_contents(
+            resource_path('views\front\cache\home\slider.blade.php'),
+            view('back.slider.template',compact('sliders'))->render()
+        );
     }
 }

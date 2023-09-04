@@ -1,9 +1,12 @@
-<div class="footer">
-    @foreach ($footers as $footer)
+{{-- <div class="footer">
         <div class="row me-0 foot">
             <div class="col-md-4 contact">
-                <i class="fa-solid fa-envelope " style="padding-right: 5px"> </i> {{ $footer->email }}
-                <i class="fa-solid fa-phone " style="padding-right: 5px;padding-left: 10px"></i> {{ $footer->phoneno }}
+                <a href="mailto:{{ $footer->email }}">
+                    <i class="fa-solid fa-envelope " style="padding-right: 5px"> </i> {{ $footer->email }}
+                </a>
+                <a href="tel:{{ $footer->phoneno }}">
+                    <i class="fa-solid fa-phone " style="padding-right: 5px;padding-left: 10px"></i> {{ $footer->phoneno }}
+                </a>
             </div>
             <div class="col-md-4 logo">
                 <img src="{{ asset($footer->logo) }}" width="70px">
@@ -50,5 +53,5 @@
         <div class="copyright">
             <i class="fa-solid fa-copyright" style="padding-right: 5px"></i> {{ $footer->copyright }}
         </div>
-    @endforeach
-</div>
+
+</div> --}}

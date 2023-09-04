@@ -25,6 +25,7 @@ class ServiceController extends Controller
             $service->logo3_title=$request->logo3_title;
             $service->logo4_title=$request->logo4_title;
             $service->save();
+            $this->makeCache();
             return redirect()->back();
         } else {
             return view('back.services.add');
@@ -56,6 +57,7 @@ class ServiceController extends Controller
            $service->logo3_title=$request->logo3_title;
            $service->logo4_title=$request->logo4_title;
            $service->save();
+           $this->makeCache();
            return redirect()->back();
        } else {
 
@@ -65,8 +67,16 @@ class ServiceController extends Controller
    public function del($service)
    {
        DB::table('services')->where('id', $service)->delete();
+       $this->makeCache();
        return redirect()->back();
    }
+     public function makeCache(){
+        $services=DB::table('services')->get();
+        file_put_contents(
+           resource_path('views/front/cache/home/services.blade.php'),
+           view('back.services.template', compact('services'))->render()
+        );
+     }
 }
 
 

@@ -18,6 +18,7 @@ public function add(Request $request){
         $donation->image=$request->image->store('uploads/donation');
         $donation->background_image=$request->background_image->store('uploads/donation');
         $donation->save();
+        $this->makeCache();
         return redirect()->back();
     }else{
     return view('back.donation.add');
@@ -40,6 +41,7 @@ public function index(){
         $donation->text2=$request->text2;
         $donation->text3=$request->text3;
         $donation->save();
+        $this->makeCache();
         return redirect()->back();
     }else{
         return view('back.donation.edit', compact('donation'));
@@ -48,6 +50,14 @@ public function index(){
   public function del($donation)
   {
     DB::table('donations')->where('id', $donation)->delete();
+    $this->makeCache();
     return redirect()->back();
   }
+  public function makeCache(){
+    $donation=DB::table('donations')->first();
+    file_put_contents(
+        resource_path('views\front\cache\home\donation.blade.php'),
+        view('back.donation.template',compact('donation'))->render()
+    );
+}
 }

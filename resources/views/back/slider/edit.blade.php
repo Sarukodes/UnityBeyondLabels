@@ -26,11 +26,11 @@
                         <input type="file" name="mobile_image" accept="image/*" id="mobile_image"
                             class="form-control photo" data-default-file="{{ asset($slider->mobile_image )}}" >
                     </div>
-                    <div class="col-md-3 mb-2 small">
+                    {{-- <div class="col-md-3 mb-2 small">
                         <label for="logo">Logo</label>
                         <input type="file" name="logo" accept="image/*" id="logo"
                             class="form-control photo" data-default-file="{{ asset($slider->logo )}}">
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="row">
                     <div class="col-md-4">

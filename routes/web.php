@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\DonationController;
 use App\Http\Controllers\Admin\FooterController;
+use App\Http\Controllers\Admin\NavbarController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SliderController;
@@ -60,8 +61,15 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::match(['GET', 'POST'], 'edit/{footer}', [FooterController::class, 'edit'])->name('edit');
         Route::get('del/{footer}', [FooterController::class, 'del'])->name('del');
 });
+   Route::prefix('navbar')->name('navbar.')->group(function(){
+    Route::get('',[NavbarController::class,'index'])->name('index');
+    Route::match(['GET', 'POST'],'add',[NavbarController::class,'add'])->name('add');
+    Route::match(['GET', 'POST'], 'edit/{navbar}', [NavbarController::class, 'edit'])->name('edit');
+    Route::get('del/{navbar}',[NavbarController::class, 'del'])->name('del');
+   });
 });
 Route::name('front')->name('front.')->group(function () {
     Route::get('', [HomeController::class, 'index'])->name('index');
+    Route::get('/events', [HomeController::class, 'events'])->name('events');
 });
 

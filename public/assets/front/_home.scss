@@ -119,6 +119,7 @@
 .news {
     padding-top: 70px;
     text-align: center;
+    margin-bottom: 50px;
     .cursive {
         font-family: cursive;
         font-size: 20px;
@@ -188,10 +189,13 @@
     color: white;
     padding-top: 50px;
     padding-bottom: 60px;
-    margin-top: 50px;
     padding-left: 22px;
     .contact {
         font-size: 16px;
+        a{
+            color: white;
+            text-decoration: none;
+        }
     }
     .logo {
         display: flex;
@@ -237,4 +241,9 @@
         color: #798492;
         font-size: 15px;
     }
+}
+
+
+@media (max-width:768px){
+
 }

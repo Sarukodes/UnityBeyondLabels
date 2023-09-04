@@ -28,6 +28,12 @@
                         </a>
                     </li>
                     <li>
+                        <a href="{{ route('admin.navbar.index') }}" class="">
+                            <i class="fa-solid fa-bars  me-2"></i>
+                            <span class="links_name">Navbar</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="{{ route('admin.slider.index') }}" class="">
                             <i class="fa-solid fa-sliders me-2"></i>
                             <span class="links_name">Slider</span>
@@ -47,13 +53,13 @@
                     </li>
                     <li>
                         <a href="{{ route('admin.news.index') }}" class="">
-                            <i class="fa-solid fa-newspaper"></i>
+                            <i class="fa-solid fa-newspaper  me-2"></i>
                             <span class="links_name">News & Events</span>
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('admin.footer.index') }}" class="">
-                            <i class="fa-solid fa-shoe-prints"></i>
+                            <i class="fa-solid fa-shoe-prints  me-2"></i>
                             <span class="links_name">Footer</span>
                         </a>
                     </li>

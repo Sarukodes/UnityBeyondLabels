@@ -13,9 +13,9 @@
 <body class="body">
     <div class="header">
     </div>
-    @include('front.includes.nav')
+    @includeIf('front.cache.home.navbar')
     @yield('content')
-    @include('front.includes.footer')
+    @includeIf('front.cache.home.footer')
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
     </script>

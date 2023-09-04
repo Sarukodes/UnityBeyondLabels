@@ -1,7 +1,7 @@
 <div class="navbar sticky-top bg-white" >
     <div class="icon">
            <a href="{{route('front.index')}}" class="logo">
-               {{-- <img src="{{ asset($slider->logo) }}"  alt=""> --}}
+               <img src="{{ asset($navbar->logo) }}"  alt="">
            </a>
     </div>
     <ul class="menus">
@@ -25,7 +25,7 @@
            </ul>
        </li> --}}
        <li>
-           <a href="#news" class="active">
+           <a href="{{route('front.events')}}" class="active">
                <span class="links_name">News & Events</span>
             </a>
         </li>

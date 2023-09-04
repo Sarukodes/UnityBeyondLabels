@@ -8,12 +8,17 @@ use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
-   public function index(){
-    $sliders = DB::table('sliders')->get(['desktop_image','mobile_image','logo', 'title','text','button_text']);
-    $services= DB::table('services')->get();
-    $donations =DB::table('donations')->get();
-    $news =DB::table('news')->get();
-    $footers =DB::table('footers')->get();
-    return view('front.home.index', compact('sliders','services', 'donations', 'news' ,'footers'));
-   }
+    public function index()
+    {
+        // $services= DB::table('services')->get();
+        // $news =DB::table('news')->latest()->take(4)->get();
+        // $footer =DB::table('footers')->first();
+        return view('front.home.index');
+    }
+
+    public function events()
+    {
+        $news = DB::table('news')->latest()->paginate(2);
+        return view('front.home.events', compact('news'));
+    }
 }

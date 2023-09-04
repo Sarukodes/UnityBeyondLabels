@@ -16,6 +16,7 @@ class NewsController extends Controller
             $news->content=$request->content;
             $news->image=$request->image->store('uploads/news');
             $news->save();
+            $this->makeCache();
             return redirect()->back();
         }
         else{
@@ -35,6 +36,7 @@ class NewsController extends Controller
             $news->title=$request->title;
             $news->content=$request->content;
             $news->save();
+            $this->makeCache();
             return redirect()->back();
         }
         else{
@@ -44,6 +46,14 @@ class NewsController extends Controller
     public function del($news)
     {
         DB::table('news')->where('id', $news)->delete();
+        $this->makeCache();
         return redirect()->back();
+    }
+    public function makeCache(){
+        $news =DB::table('news')->latest()->take(5)->get();
+        file_put_contents(
+             resource_path('views/front/cache/home/news.blade.php'),
+             view('back.news.template', compact('news'))->render()
+        );
     }
 }

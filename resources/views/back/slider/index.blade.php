@@ -13,7 +13,7 @@
                         <tr>
                             <th>Desktop Image</th>
                             <th>Mobile Image</th>
-                            <th>Logo</th>
+                            {{-- <th>Logo</th> --}}
                             <th>Title</th>
                             <th>Text</th>
                             <th>Buttom_text</th>
@@ -30,10 +30,10 @@
                                     <img src="{{ asset($slider->mobile_image) }}" alt="" srcset=""
                                         width="70">
                                 </td>
-                                <td>
+                                {{-- <td>
                                     <img src="{{ asset($slider->logo) }}" alt="" srcset=""
                                         width="70">
-                                </td>
+                                </td> --}}
                                 <td>{{ $slider->title }}</td>
                                 <td>{{ $slider->text }}</td>
                                 <td>{{ $slider->button_text }}</td>
