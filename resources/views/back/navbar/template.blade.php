@@ -4,6 +4,12 @@
                <img src="{{ asset($navbar->logo) }}"  alt="">
            </a>
     </div>
+    <button class="menu-toggle" id="mobileMenuToggle">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </button>
+    <div class="menu-container" id="menuContainer">
     <ul class="menus">
        <li>
            <a href="{{ route('front.index') }}" class="">
@@ -40,4 +46,14 @@
            </a>
        </li>
     </ul>
+    </div>
 </div>
+
+<script>
+    const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+    const menuContainer = document.getElementById("menuContainer");
+
+    mobileMenuToggle.addEventListener("click", () => {
+        menuContainer.classList.toggle("active");
+    });
+</script>
