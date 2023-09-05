@@ -1,32 +1,123 @@
-.navbar {
+.desktop-navbar {
     padding: 15px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid rgba(196, 194, 194, 0.1);
-
-    .icon{
-        img{
+    // .menu-toggle  {
+    //     display: none;
+    // }
+    .icon {
+        img {
             max-height: 50px;
         }
     }
-    .menus{
+    .menus {
         margin: 0px !important;
-        li{
+        li {
             display: inline-block;
             margin-left: 50px;
             font-size: 17px;
             font-weight: 500;
-            a{
+            a {
                 text-decoration: none;
                 color: black;
-                padding-left:  15px;
+                padding-left: 15px;
 
-            &:hover{
-            color: red;
-
+                &:hover {
+                    color: red;
+                }
             }
         }
+    }
+}
+.mobile-navbar {
+    display: none;
+}
+@media (max-width: 768px) {
+    .mobile-navbar {
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+        align-items: center;
+        .icon {
+            img {
+                margin-top: 5px;
+                margin-left: 15px;
+                width: 50px;
+            }
         }
+        .menu-toggle {
+            background: none;
+            border: none;
+            display: block;
+            cursor: pointer;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+            .line {
+                width: 30px;
+                height: 3px;
+                background-color: #333;
+                margin: 3px 0;
+                transition: transform 0.4s ease;
+            }
+            .cross-icon {
+                display: none;
+                .active {
+                    display: block;
+                }
+            }
+        }
+        .close-icon {
+            display: none;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            background: none;
+            border: none;
+            color: black;
+        }
+        .menu-container {
+            display: none;
+        }
+        .menus {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li {
+                margin-top: 30px;
+                margin-bottom: 10px;
+                a {
+                    text-decoration: none;
+                    color: #333;
+                    font-weight: bold;
+                    font-size: 16px;
+                    transition: color 0.3s ease;
+                    display: block;
+                    padding: 10px 0;
+                    &:hover {
+                        color: #ff5733;
+                    }
+                }
+            }
+        }
+        .menu-container.active {
+            display: block;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 3000;
+            overflow-y: auto;
+        }
+    }
+
+    .desktop-navbar {
+        display: none;
     }
 }

@@ -244,64 +244,7 @@
 }
 
 @media (max-width: 768px) {
-    .navbar {
-        padding: 10px;
-        justify-content: space-between;
-        align-items: center;
-
-        .icon {
-            img {
-                width: 50px;
-            }
-        }
-        .menu-toggle {
-            background: none;
-            border: none;
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            padding: 5px;
-            .line {
-                width: 30px;
-                height: 3px;
-                background-color: #333;
-                margin: 3px 0;
-                transition: transform 0.4s ease;
-            }
-        }
-        .menu-container {
-            display: none;
-        }
-
-        .menus {
-            list-style: none;
-            li {
-                margin-bottom: 10px;
-                a {
-                    text-decoration: none;
-                    color: #333;
-                    font-weight: bold;
-                    font-size: 16px;
-                    transition: color 0.3s ease;
-                    &:hover {
-                        color: #ff5733;
-                    }
-                }
-            }
-        }
-        .menu-container.active {
-            display: flex;
-            position: fixed;
-            top: 80px;
-            right: 10px;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
-    }
-    .home-text{
+    .home-text {
         .title {
             font-size: 14px;
             font-family: cursive;
@@ -329,7 +272,51 @@
             }
         }
     }
-
+    .services {
+        .text {
+            .line {
+                width: 80%;
+                height: 2.5px;
+                background: linear-gradient(
+                    to right,
+                    #546071 12%,
+                    #dadde1 10%,
+                    #dadde1 100%
+                );
+            }
+            .title {
+            }
+            .content {
+                padding-top: 30px;
+                font-weight: 200;
+                font-size: 17px;
+            }
+        }
+        .logo {
+            margin-top: 30px;
+        }
+        .box {
+            border: 1px solid #f3f3f3;
+            height: 150px;
+            width: 170px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            font-size: 21px;
+            font-weight: 300;
+            margin-left: 50px;
+            img {
+                width: 70px;
+                margin-left: 15px;
+            }
+            &:hover {
+                background-color: #ce3959;
+                color: white;
+            }
+        }
+    }
     .news {
         padding-top: 70px;
         text-align: center;
@@ -396,6 +383,88 @@
                     }
                 }
             }
+        }
+    }
+    .donation {
+        .image-container {
+            margin-bottom: 50px;
+            margin-top: 90px;
+            .text {
+                .donation-text {
+                    border-right: none;
+                    margin-left: 20px;
+                    margin-bottom: 20px;
+                    margin-top: -80px;
+                }
+                .image {
+                    padding-bottom: 20px;
+                    img {
+                        width: 100px;
+                        padding-left: 20px;
+                    }
+                }
+                .goal {
+                    margin-top: -50px;
+                    margin-left: -70px;
+                }
+            }
+        }
+    }
+    .footer {
+        .contact {
+            font-size: 16px;
+            margin-left: 10px;
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+        .logo {
+            display: flex;
+            margin-top: 35px;
+            margin-left: -25px;
+            font-size: 15px;
+            img {
+                margin-top: -20px;
+            }
+            .text {
+                font-size: 15px;
+            }
+        }
+        .icon {
+            margin-top: 20px;
+            padding-left: 120px;
+            i {
+                margin-right: 22px;
+                color: white;
+                &:hover {
+                    color: blue;
+                }
+            }
+        }
+        .nav {
+            font-size: 17px;
+            .menus {
+                margin-top: 50px;
+                li {
+                    display: inline-block;
+                    margin-right: 20px;
+                    margin-bottom: 10px;
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        &:hover {
+                            color: #ce3959;
+                        }
+                    }
+                }
+            }
+        }
+        .copyright {
+            text-align: center;
+            margin-top: 50px;
+            color: #798492;
+            font-size: 15px;
         }
     }
 }

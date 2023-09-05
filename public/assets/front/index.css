@@ -231,59 +231,6 @@
 }
 
 @media (max-width: 768px) {
-  .navbar {
-    padding: 10px;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .navbar .icon img {
-    width: 50px;
-  }
-  .navbar .menu-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-  }
-  .navbar .menu-toggle .line {
-    width: 30px;
-    height: 3px;
-    background-color: #333;
-    margin: 3px 0;
-    transition: transform 0.4s ease;
-  }
-  .navbar .menu-container {
-    display: none;
-  }
-  .navbar .menus {
-    list-style: none;
-  }
-  .navbar .menus li {
-    margin-bottom: 10px;
-  }
-  .navbar .menus li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 16px;
-    transition: color 0.3s ease;
-  }
-  .navbar .menus li a:hover {
-    color: #ff5733;
-  }
-  .navbar .menu-container.active {
-    display: flex;
-    position: fixed;
-    top: 80px;
-    right: 10px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-  }
   .home-text .title {
     font-size: 14px;
     font-family: cursive;
@@ -309,6 +256,40 @@
   .home-text .button_text:hover {
     background-color: #ce3959;
     border-color: #ce3959;
+  }
+  .services .text .line {
+    width: 80%;
+    height: 2.5px;
+    background: linear-gradient(to right, #546071 12%, #dadde1 10%, #dadde1 100%);
+  }
+  .services .text .content {
+    padding-top: 30px;
+    font-weight: 200;
+    font-size: 17px;
+  }
+  .services .logo {
+    margin-top: 30px;
+  }
+  .services .box {
+    border: 1px solid #f3f3f3;
+    height: 150px;
+    width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    font-size: 21px;
+    font-weight: 300;
+    margin-left: 50px;
+  }
+  .services .box img {
+    width: 70px;
+    margin-left: 15px;
+  }
+  .services .box:hover {
+    background-color: #ce3959;
+    color: white;
   }
   .news {
     padding-top: 70px;
@@ -370,35 +351,199 @@
     margin-bottom: 50px;
     background: linear-gradient(to right, #546071 12%, #dadde1 10%, #dadde1 100%);
   }
+  .donation .image-container {
+    margin-bottom: 50px;
+    margin-top: 90px;
+  }
+  .donation .image-container .text .donation-text {
+    border-right: none;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: -80px;
+  }
+  .donation .image-container .text .image {
+    padding-bottom: 20px;
+  }
+  .donation .image-container .text .image img {
+    width: 100px;
+    padding-left: 20px;
+  }
+  .donation .image-container .text .goal {
+    margin-top: -50px;
+    margin-left: -70px;
+  }
+  .footer .contact {
+    font-size: 16px;
+    margin-left: 10px;
+  }
+  .footer .contact a {
+    color: white;
+    text-decoration: none;
+  }
+  .footer .logo {
+    display: flex;
+    margin-top: 35px;
+    margin-left: -25px;
+    font-size: 15px;
+  }
+  .footer .logo img {
+    margin-top: -20px;
+  }
+  .footer .logo .text {
+    font-size: 15px;
+  }
+  .footer .icon {
+    margin-top: 20px;
+    padding-left: 120px;
+  }
+  .footer .icon i {
+    margin-right: 22px;
+    color: white;
+  }
+  .footer .icon i:hover {
+    color: blue;
+  }
+  .footer .nav {
+    font-size: 17px;
+  }
+  .footer .nav .menus {
+    margin-top: 50px;
+  }
+  .footer .nav .menus li {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  .footer .nav .menus li a {
+    text-decoration: none;
+    color: white;
+  }
+  .footer .nav .menus li a:hover {
+    color: #ce3959;
+  }
+  .footer .copyright {
+    text-align: center;
+    margin-top: 50px;
+    color: #798492;
+    font-size: 15px;
+  }
 }
-.navbar {
+.desktop-navbar {
   padding: 15px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid rgba(196, 194, 194, 0.1);
 }
-.navbar .icon img {
+.desktop-navbar .icon img {
   max-height: 50px;
 }
-.navbar .menus {
+.desktop-navbar .menus {
   margin: 0px !important;
 }
-.navbar .menus li {
+.desktop-navbar .menus li {
   display: inline-block;
   margin-left: 50px;
   font-size: 17px;
   font-weight: 500;
 }
-.navbar .menus li a {
+.desktop-navbar .menus li a {
   text-decoration: none;
   color: black;
   padding-left: 15px;
 }
-.navbar .menus li a:hover {
+.desktop-navbar .menus li a:hover {
   color: red;
 }
 
+.mobile-navbar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-navbar {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mobile-navbar .icon img {
+    margin-top: 5px;
+    margin-left: 15px;
+    width: 50px;
+  }
+  .mobile-navbar .menu-toggle {
+    background: none;
+    border: none;
+    display: block;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+  }
+  .mobile-navbar .menu-toggle .line {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: transform 0.4s ease;
+  }
+  .mobile-navbar .menu-toggle .cross-icon {
+    display: none;
+  }
+  .mobile-navbar .menu-toggle .cross-icon .active {
+    display: block;
+  }
+  .mobile-navbar .close-icon {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: black;
+  }
+  .mobile-navbar .menu-container {
+    display: none;
+  }
+  .mobile-navbar .menus {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .mobile-navbar .menus li {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  .mobile-navbar .menus li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 10px 0;
+  }
+  .mobile-navbar .menus li a:hover {
+    color: #ff5733;
+  }
+  .mobile-navbar .menu-container.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 3000;
+    overflow-y: auto;
+  }
+  .desktop-navbar {
+    display: none;
+  }
+}
 .events .text {
   padding-top: 160px;
   padding-left: 100px;
