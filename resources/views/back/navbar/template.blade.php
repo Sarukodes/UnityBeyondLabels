@@ -92,25 +92,24 @@
 
 <script>
     const mobileMenuToggle = document.getElementById("mobileMenuToggle");
-    const closeMenuToggle = document.getElementById("closeMenuToggle");
-    const menuContainer = document.getElementById("menuContainer");
-    const logo = document.querySelector(".mobile-navbar .icon");
+const closeMenuToggle = document.getElementById("closeMenuToggle");
+const menuContainer = document.getElementById("menuContainer");
+const logo = document.querySelector(".mobile-navbar .icon");
 
-    // Initially hide the menu container and logo
-    menuContainer.style.display = "none";
-    logo.style.display = "block"; // or "inline-block" based on your logo's CSS
+mobileMenuToggle.addEventListener("click", () => {
+    mobileMenuToggle.style.display = "none";
+    closeMenuToggle.style.display = "block";
+    menuContainer.style.display = "block"; // Show the menu items
+    logo.style.display = "none"; // Hide the logo
+    document.body.style.overflow = "hidden"; // Disable scrolling
+});
 
-    mobileMenuToggle.addEventListener("click", () => {
-        mobileMenuToggle.style.display = "none";
-        closeMenuToggle.style.display = "block";
-        menuContainer.style.display = "block"; // Show the menu items
-        logo.style.display = "none"; // Hide the logo
-    });
+closeMenuToggle.addEventListener("click", () => {
+    mobileMenuToggle.style.display = "block";
+    closeMenuToggle.style.display = "none";
+    menuContainer.style.display = "none"; // Hide the menu items
+    logo.style.display = "block"; // Show the logo
+    document.body.style.overflow = "auto"; // Enable scrolling
+});
 
-    closeMenuToggle.addEventListener("click", () => {
-        mobileMenuToggle.style.display = "block";
-        closeMenuToggle.style.display = "none";
-        menuContainer.style.display = "none"; // Hide the menu items
-        logo.style.display = "block"; // Show the logo
-    });
 </script>
