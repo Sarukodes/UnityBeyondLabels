@@ -365,9 +365,13 @@
     margin-bottom: 50px;
     margin-top: 90px;
   }
+  .donation .image-container .text {
+    margin-left: -20px;
+  }
   .donation .image-container .text .donation-text {
+    text-align: center;
     border-right: none;
-    margin-left: 20px;
+    margin-left: 50px;
     margin-bottom: 20px;
     margin-top: -80px;
   }
@@ -384,7 +388,6 @@
   }
   .footer .contact {
     font-size: 16px;
-    margin-left: 10px;
   }
   .footer .contact a {
     color: white;

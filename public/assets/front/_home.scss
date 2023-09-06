@@ -115,6 +115,7 @@
             }
         }
     }
+
 }
 .news {
     padding-top: 70px;
@@ -397,9 +398,11 @@
             margin-bottom: 50px;
             margin-top: 90px;
             .text {
+                margin-left: -20px;
                 .donation-text {
+                    text-align: center;
                     border-right: none;
-                    margin-left: 20px;
+                    margin-left: 50px;
                     margin-bottom: 20px;
                     margin-top: -80px;
                 }
@@ -416,11 +419,12 @@
                 }
             }
         }
+
     }
     .footer {
         .contact {
             font-size: 16px;
-            margin-left: 10px;
+            // margin-left: 8px;
             a {
                 color: white;
                 text-decoration: none;
@@ -474,4 +478,5 @@
             font-size: 15px;
         }
     }
+
 }
