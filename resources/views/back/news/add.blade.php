@@ -18,6 +18,10 @@
                         <input type="text" name="title" id="title" class="form-control">
                     </div>
                     <div class="col-md-12">
+                        <label for="highlight_content">Highlight Content</label>
+                        <input type="text" name="highlight_content" id="content" class="form-control">
+                    </div>
+                    <div class="col-md-12">
                         <label for="content">Content</label>
                         <input type="text" name="content" id="content" class="form-control">
                     </div>

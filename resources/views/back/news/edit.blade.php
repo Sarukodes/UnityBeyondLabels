@@ -20,10 +20,13 @@
                         <input type="text" name="title" id="title" class="form-control" value="{{$news->title}}" >
                     </div>
                     <div class="col-md-12">
+                        <label for="highlight_content">Highlight Content</label>
+                        <input type="text" name="highlight_content" id="highlight_content" class="form-control" value="{{$news->highlight_content}}">
+                    </div>
+                    <div class="col-md-12">
                         <label for="content">Content</label>
                         <input type="text" name="content" id="content" class="form-control" value="{{$news->content}}">
                     </div>
-
                     <div class="col-md-4 mb-2 small">
                         <label for="image">Image</label>
                         <input type="file" name="image" accept="image/*" id="image"

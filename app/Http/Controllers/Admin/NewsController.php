@@ -14,6 +14,7 @@ class NewsController extends Controller
             $news=new news();
             $news->title=$request->title;
             $news->content=$request->content;
+            $news->highlight_content=$request->highlight_content;
             $news->image=$request->image->store('uploads/news');
             $news->save();
             $this->makeCache();
@@ -35,6 +36,7 @@ class NewsController extends Controller
             }
             $news->title=$request->title;
             $news->content=$request->content;
+            $news->highlight_content=$request->highlight_content;
             $news->save();
             $this->makeCache();
             return redirect()->back();

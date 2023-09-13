@@ -9,7 +9,7 @@
                 <thead>
                     <tr>
                         <th>Title</th>
-                        <th>Content</th>
+                        <th>Highlight Content</th>
                         <th>Image</th>
                         <th>Action</th>
                     </tr>
@@ -18,7 +18,7 @@
                     @foreach ($news as $new)
                         <tr>
                             <td>{{ $new->title }}</td>
-                            <td>{{ $new->content }}</td>
+                            <td>{{ $new->highlight_content }}</td>
                             <td>
                                 <img src="{{ asset($new->image) }}" alt="" srcset="" width="70">
                             </td>

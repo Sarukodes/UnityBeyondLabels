@@ -71,5 +71,6 @@ Route::prefix('admin')->name('admin.')->group(function () {
 Route::name('front')->name('front.')->group(function () {
     Route::get('', [HomeController::class, 'index'])->name('index');
     Route::get('/events', [HomeController::class, 'events'])->name('events');
+    Route::get('/news/{id}', [HomeController::class, 'news'])->name('news');
 });
 

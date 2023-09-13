@@ -22,10 +22,11 @@
                         <img src="{{ $new->image }}" width="400px">
                     </div>
                     <div class="col-md-7 texts">
+                        {{-- <a href="{{ route('front.news', ['id' => $new->id]) }}" class="title">{{ $new->title }}</a> --}}
                         <p class="title">{{ $new->title }}</p>
                         <div class="line"></div>
-                        <p class="content">{{ $new->content }}</p>
-                        <a href="" class="btn read">Read more</a>
+                        <p class="content">{{ $new->highlight_content }}</p>
+                        <a href="{{ route('front.news', ['id' => $new->id]) }}" class="btn read">Read more</a>
                     </div>
                 </div>
             </div>
@@ -49,7 +50,5 @@
                 </span>
             @endif
         </div>
-
     </div>
-
 @endsection

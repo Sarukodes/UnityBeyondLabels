@@ -15,10 +15,13 @@ class HomeController extends Controller
         // $footer =DB::table('footers')->first();
         return view('front.home.index');
     }
-
     public function events()
     {
         $news = DB::table('news')->latest()->paginate(2);
         return view('front.home.events', compact('news'));
+    }
+    public function news($id){
+        $news = DB::table('news')->find($id);
+        return view('front.home.newsShow', compact('news'));
     }
 }
