@@ -29,22 +29,24 @@ background-image:linear-gradient(
             <div class="popular-event">
                 <div class="popular">Popular Events</div>
                 <div class="line"></div>
-                <div class="news-holder">
+            </div>
+            <div class="news-holder container">
+                <div class="row">
                     @foreach ($allnews as $allnew)
-                        <div class="row me-0">
-                            <div class="col-md-6 col-sm-12">
-                                <div class="event-box">
-                                    <img src="{{ asset($allnew->image) }}" class="news-image">
-                                    <div class="text">
-                                        <p class="title">{{ $allnew->title }}</p>
-                                        <div class="line"></div>
-                                        <p class="content">{{ $allnew->highlight_content }}</p>
-                                        <a href="{{ route('front.news', ['id' => $allnew->id]) }}" class="btn read">Read
-                                            more</a>
-                                    </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="event-box">
+                                {{-- <a href="{{ route('front.news', ['id' => $new->id]) }}" class="news-link"> --}}
+                                <img src="{{ asset($allnew->image) }}" class="news-image">
+                                <div class="text">
+                                    <a href="{{ route('front.news', ['id' => $allnew->id]) }}" class="news-link">
+                                    <p class="title">{{$allnew->title}}</p>
+                                    <div class="line"></div>
+                                    <p class="content">{{$allnew->highlight_content}}</p>
+                                    <a href="{{ route('front.news', ['id' => $allnew->id]) }}" class="btn read">Read
+                                        more</a>
+                                    </a>
                                 </div>
                             </div>
-
                         </div>
                     @endforeach
                 </div>

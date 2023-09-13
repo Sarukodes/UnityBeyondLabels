@@ -179,7 +179,6 @@
 
 .newsShow .text {
   padding-top: 160px;
-  padding-left: 100px;
   font-size: 70px;
   color: white;
   font-weight: 500;
@@ -227,11 +226,10 @@
   display: flex;
   flex-wrap: wrap;
   text-align: left;
-  margin-left: 90px;
 }
 .newsShow .selected-container .news-holder .event-box {
   border: 1px solid #FFFFFF;
-  width: 500px;
+  width: 100%;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -241,11 +239,11 @@
   text-decoration: none;
 }
 .newsShow .selected-container .news-holder .event-box .news-image {
-  width: 500px;
+  width: 100%;
 }
 .newsShow .selected-container .news-holder .event-box .text {
-  margin-top: -90px;
-  margin-left: -100px;
+  margin-top: -100px;
+  margin-right: 30px;
 }
 .newsShow .selected-container .news-holder .event-box .text .title {
   font-size: 21px;
