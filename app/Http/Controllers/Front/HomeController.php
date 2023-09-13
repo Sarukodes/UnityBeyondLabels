@@ -29,4 +29,7 @@ class HomeController extends Controller
         ->get();
         return view('front.home.newsShow', compact('news', 'allnews'));
     }
+    public function contact(){
+          return view('front.home.contact');
+    }
 }
