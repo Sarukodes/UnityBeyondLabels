@@ -1,5 +1,5 @@
-<div class="news-holder">
-    <div class="row me-0">
+<div class="news-holder container">
+    <div class="row">
         @foreach ($news as $new)
             <div class="col-md-6 col-sm-12">
                 <div class="event-box">
@@ -10,6 +10,7 @@
                         <p class="title">{{$new->title}}</p>
                         <div class="line"></div>
                         <p class="content">{{$new->highlight_content}}</p>
+                        </a>
                     </div>
                 </div>
             </div>
