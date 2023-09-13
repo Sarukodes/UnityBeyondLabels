@@ -22,6 +22,11 @@ class HomeController extends Controller
     }
     public function news($id){
         $news = DB::table('news')->find($id);
-        return view('front.home.newsShow', compact('news'));
+        $allnews = DB::table('news')
+        ->where('id', '!=', $id) // Exclude the specified ID
+        ->latest()
+        ->take(2)
+        ->get();
+        return view('front.home.newsShow', compact('news', 'allnews'));
     }
 }
