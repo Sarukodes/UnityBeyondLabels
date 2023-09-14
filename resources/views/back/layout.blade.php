@@ -59,7 +59,7 @@
                     </li>
                     <li>
                         <a href="{{ route('admin.contact.index') }}" class="">
-                            <i class="fa-solid fa-newspaper  me-2"></i>
+                            <i class="fa-solid fa-address-book me-2"></i>
                             <span class="links_name">Contact </span>
                         </a>
                     </li>

@@ -7,7 +7,7 @@ use App\Http\Controllers\Admin\NavbarController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SliderController;
-use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Front\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -69,7 +69,10 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('del/{navbar}',[NavbarController::class, 'del'])->name('del');
    });
    Route::prefix('contact')->name('contact.')->group(function(){
-      Route::get('', [ContactController::class,'index'])->name('index');
+    Route::get('', [ContactController::class,'index'])->name('index');
+    Route::match(['GET','POST'], 'add', [ContactController::class, 'add'])->name('add');
+    Route::match(['GET','POST'], 'edit/{contact}', [ContactController::class, 'edit'])->name('edit');
+    Route::get('del/{contact}',[ContactController::class, 'del'])->name('del');
    });
 });
 Route::name('front')->name('front.')->group(function () {
