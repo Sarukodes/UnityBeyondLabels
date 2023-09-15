@@ -76,7 +76,7 @@
                 </a>
             </li>
             <li>
-                <a href="{{ route('front.index') }}" class="active">
+                <a href="{{ route('front.contact') }}" class="active">
                     <span class="links_name">Contact</span>
                 </a>
             </li>

@@ -20,16 +20,19 @@ class HomeController extends Controller
         $news = DB::table('news')->latest()->paginate(2);
         return view('front.home.events', compact('news'));
     }
-    public function news($id){
+    public function news($id)
+    {
         $news = DB::table('news')->find($id);
         $allnews = DB::table('news')
-        ->where('id', '!=', $id) // Exclude the specified ID
-        ->latest()
-        ->take(2)
-        ->get();
+            ->where('id', '!=', $id) // Exclude the specified ID
+            ->latest()
+            ->take(2)
+            ->get();
         return view('front.home.newsShow', compact('news', 'allnews'));
     }
-    public function contact(){
-          return view('front.home.contact');
+    public function contact()
+    {
+        $contact = DB::table('contacts')->get();
+        return view('front.home.contact', compact('contact'));
     }
 }

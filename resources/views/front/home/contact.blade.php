@@ -19,10 +19,9 @@
     <div class="contact">
         <div class="row me-0">
             <div class="col-md-6">
-
+               {{-- <p>{{$contact->title}}</p> --}}
             </div>
             <div class="col-md-6">
-
             </div>
         </div>
     </div>
