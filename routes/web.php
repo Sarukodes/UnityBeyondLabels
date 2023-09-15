@@ -71,6 +71,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
    Route::prefix('contact')->name('contact.')->group(function(){
     Route::get('', [ContactController::class,'index'])->name('index');
     Route::match(['GET','POST'], 'add', [ContactController::class, 'add'])->name('add');
+    Route::post('save',[ContactController::class,'save'])->name('save');
     Route::match(['GET','POST'], 'edit/{contact}', [ContactController::class, 'edit'])->name('edit');
     Route::get('del/{contact}',[ContactController::class, 'del'])->name('del');
    });

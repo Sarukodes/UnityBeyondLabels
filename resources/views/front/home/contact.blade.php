@@ -42,7 +42,8 @@
                 <div class="col-md-5 contact-form">
                     <p>Contact Form</p>
                     <div class="line"></div>
-                    <form action="" method="post">
+                    <form action="save" method="POST">
+                        @csrf
                         <div class="form-group">
                             <input type="text" id="name" name="name" class="form-control" placeholder="FullName" required>
                         </div>
@@ -53,7 +54,7 @@
                             <textarea id="message" name="message" class="form-control" rows="3" placeholder="Message" required></textarea>
                         </div>
                         <button type="submit" class="submit">Email US</button>
-                    </form>
+                    {{-- </form> --}}
                 </div>
             </div>
     </div>

@@ -69,12 +69,12 @@
                             <span class="links_name">Footer</span>
                         </a>
                     </li>
-                    <li class="log_out" style="margin-left: 24px">
-                        {{-- <a href="{{route('logout')}}"> --}}
+                    {{-- <li class="log_out" style="margin-left: 24px">
+                        <a href="{{route('logout')}}">
                         <i class="fa-solid fa-user me-2"></i>
                         <span class="links_name">Log out</span>
                         </a>
-                    </li>
+                    </li> --}}
                 </ul>
             </div>
         </div>
