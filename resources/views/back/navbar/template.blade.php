@@ -65,11 +65,11 @@
                     <span class="links_name">Home</span>
                 </a>
             </li>
-            <li>
+            {{-- <li>
                 <a href="#services" class="">
                     <span class="links_name">Services</span>
                 </a>
-            </li>
+            </li> --}}
             <li>
                 <a href="{{ route('front.events') }}" class="active">
                     <span class="links_name">News & Events</span>

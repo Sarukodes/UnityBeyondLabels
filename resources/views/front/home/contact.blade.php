@@ -16,13 +16,45 @@
             <div class="text" style="font-size: 50px">Contact Page</div>
         </div>
     </div>
-    <div class="contact">
-        <div class="row me-0">
-            <div class="col-md-6">
-               {{-- <p>{{$contact->title}}</p> --}}
+    <div class="contacts">
+        @foreach ($contacts as $contact)
+            <div class="row me-0">
+                <div class="col-md-7">
+                    <div class="title">{!! $contact->title !!}</div>
+                    <div class="line"></div>
+                    <div class="content">{{ $contact->text }}</div>
+                    <div class="box-holder">
+                        <div class="box">
+                            <i class="fa-solid fa-mobile"></i>
+                            <p>{{ $contact->Contactno }}</p>
+                        </div>
+                        <div class="box">
+                            <i class="fa-solid fa-location-crosshairs"></i>
+                            <p>{{ $contact->address }}</p>
+                        </div>
+                        <div class="box">
+                            <i class="fa-solid fa-envelope-open-text"></i>
+                            <p>{{ $contact->gmail }}</p>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+                <div class="col-md-5 contact-form">
+                    <p>Contact Form</p>
+                    <div class="line"></div>
+                    <form action="" method="post">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" class="form-control" placeholder="FullName" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" class="form-control" rows="3" placeholder="Message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit">Email US</button>
+                    </form>
+                </div>
             </div>
-            <div class="col-md-6">
-            </div>
-        </div>
     </div>
-    @endsection
+@endsection

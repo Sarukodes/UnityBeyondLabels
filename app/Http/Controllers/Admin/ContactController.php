@@ -18,6 +18,9 @@ class ContactController extends Controller
             $contact->address=$request->address;
             $contact->gmail=$request->gmail;
             $contact->map=$request->map;
+            $contact->name=$request->name;
+            $contact->email=$request->email;
+            $contact->message=$request->message;
             $contact->save();
             return redirect()->back();
         }
@@ -31,7 +34,6 @@ class ContactController extends Controller
     }
     public function edit(Request $request, Contact $contact ){
         if ($request->getMethod()=='POST'){
-            $contact =new Contact();
             $contact->title=$request->title;
             $contact->text=$request->text;
             $contact->Contactno=$request->Contactno;

@@ -32,7 +32,7 @@ class HomeController extends Controller
     }
     public function contact()
     {
-        $contact = DB::table('contacts')->get();
-        return view('front.home.contact', compact('contact'));
+        $contacts = DB::table('contacts')->latest()->take(1)->get();
+        return view('front.home.contact', compact('contacts'));
     }
 }

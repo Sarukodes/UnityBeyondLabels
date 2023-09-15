@@ -13,7 +13,7 @@ background-image:linear-gradient(
  rgba(30, 29, 29, 0.55),
  rgba(42, 41, 41, 0.406)
  ),url('https://cdn.pixabay.com/photo/2022/06/12/18/32/lovers-7258617_1280.jpg')">
-            <div class="text">Events</div>
+            <div class="text">Popular News & Events</div>
         </div>
         <div class="selected-container">
             <div class="selected-news">
