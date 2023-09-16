@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Front\HomeController;
+use App\Http\Controllers\Front\ContactFormController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -80,7 +81,7 @@ Route::name('front')->name('front.')->group(function () {
     Route::get('/events', [HomeController::class, 'events'])->name('events');
     Route::get('/news/{id}', [HomeController::class, 'news'])->name('news');
     Route::get('/contact',[HomeController::class, 'contact'])->name(('contact'));
-    Route::get('contact/add',[ContactController::class,'add']);
-    Route::post('contact/save',[ContactController::class,'save']);
+    Route::get('contact/add',[ContactFormController::class,'add']);
+    Route::post('/contact/save', [ContactFormController::class, 'save'])->name('contact.save');
 });
 

@@ -42,7 +42,7 @@
                 <div class="col-md-5 contact-form">
                     <p>Contact Form</p>
                     <div class="line"></div>
-                    <form action="save" method="POST">
+                    <form action="/contact/save" method="POST">
                         @csrf
                         <div class="form-group">
                             <input type="text" id="name" name="name" class="form-control" placeholder="FullName" required>
