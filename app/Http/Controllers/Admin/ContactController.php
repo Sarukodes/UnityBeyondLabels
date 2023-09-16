@@ -18,23 +18,12 @@ class ContactController extends Controller
             $contact->address=$request->address;
             $contact->gmail=$request->gmail;
             $contact->map=$request->map;
-            // $contact->name=$request->name;
-            // $contact->email=$request->email;
-            // $contact->message=$request->message;
             $contact->save();
             return redirect()->back();
         }
         else{
             return view('back.contact.add');
         }
-    }
-    public function save(Request $request){
-        $contact= new contact();
-        $contact->name=$request->name;
-        $contact->email=$request->email;
-        $contact->message=$request->message;
-        $contact->save();
-        return redirect('front.contact');
     }
     public function index(){
         $contacts=DB::table('contacts')->get();

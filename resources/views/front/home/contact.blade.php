@@ -54,7 +54,7 @@
                             <textarea id="message" name="message" class="form-control" rows="3" placeholder="Message" required></textarea>
                         </div>
                         <button type="submit" class="submit">Email US</button>
-                    {{-- </form> --}}
+                    </form>
                 </div>
             </div>
     </div>
