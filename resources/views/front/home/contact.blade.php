@@ -53,7 +53,7 @@
                         <div class="form-group">
                             <textarea id="message" name="message" class="form-control" rows="3" placeholder="Message" required></textarea>
                         </div>
-                        <button type="submit" class="submit">Email US</button>
+                        <button type="submit" class="submit">Contact US</button>
                     </form>
                 </div>
             </div>
