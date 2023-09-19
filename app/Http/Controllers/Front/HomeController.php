@@ -35,4 +35,8 @@ class HomeController extends Controller
         $contacts = DB::table('contacts')->latest()->take(1)->get();
         return view('front.home.contact', compact('contacts'));
     }
+    public function donation(){
+        $donation =DB::table('donations')->get();
+        return view('front.home.donation',compact('donation'));
+    }
 }

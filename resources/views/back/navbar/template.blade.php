@@ -37,7 +37,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" id="showPopup" class="">
+                <a href="{{ route('front.donation') }}" id="showPopup" class="">
                     <span class="links_name">Donation</span>
                 </a>
             </li>
@@ -79,7 +79,7 @@
                 </a>
             </li>
             <li>
-                <a href="#donation" class="">
+                <a href="{{ route('front.donation') }}"  class="">
                     <span class="links_name">Donation</span>
                 </a>
             </li>

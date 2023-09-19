@@ -83,5 +83,6 @@ Route::name('front')->name('front.')->group(function () {
     Route::get('/contact',[HomeController::class, 'contact'])->name(('contact'));
     Route::get('contact/add',[ContactFormController::class,'add']);
     Route::post('/contact/save', [ContactFormController::class, 'save'])->name('contact.save');
+    Route::get('/donation', [HomeController::class,'donation'])->name('donation');
 });
 

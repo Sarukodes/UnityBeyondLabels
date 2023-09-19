@@ -424,6 +424,31 @@
   background-color: #1d2024;
 }
 
+.showdonation .image-container {
+  margin-bottom: 100px;
+  text-align: right;
+}
+.showdonation .image-container .text {
+  color: #ce3959;
+  padding-top: 100px;
+  padding-right: 80px;
+}
+.showdonation .image-container .text .donation-text {
+  border-right: 0.5px solid rgb(87, 85, 85);
+  padding-right: 35px;
+  padding-top: 120px;
+}
+.showdonation .image-container .text .image {
+  padding-right: 20px;
+}
+.showdonation .image-container .text .image img {
+  width: 350px;
+}
+.showdonation .image-container .text .goal {
+  padding-top: 120px;
+  padding-left: 150px;
+}
+
 @media (max-width: 768px) {
   .home-text .title {
     font-size: 14px;
