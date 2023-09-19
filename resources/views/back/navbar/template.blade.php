@@ -64,11 +64,6 @@
                 </a>
             </li>
             <li>
-                <a href="#services" class="">
-                    <span class="links_name">Services</span>
-                </a>
-            </li>
-            <li>
                 <a href="{{ route('front.events') }}" class="active">
                     <span class="links_name">News & Events</span>
                 </a>
@@ -86,4 +81,30 @@
         </ul>
     </div>
 </div>
+
+
+<script>
+    const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+const closeMenuToggle = document.getElementById("closeMenuToggle");
+const menuContainer = document.getElementById("menuContainer");
+const logo = document.querySelector(".mobile-navbar .icon");
+
+mobileMenuToggle.addEventListener("click", () => {
+    mobileMenuToggle.style.display = "none";
+    closeMenuToggle.style.display = "block";
+    menuContainer.style.display = "block"; // Show the menu items
+    logo.style.display = "none"; // Hide the logo
+    document.body.style.overflow = "hidden"; // Disable scrolling
+});
+
+closeMenuToggle.addEventListener("click", () => {
+    mobileMenuToggle.style.display = "block";
+    closeMenuToggle.style.display = "none";
+    menuContainer.style.display = "none"; // Hide the menu items
+    logo.style.display = "block"; // Show the logo
+    document.body.style.overflow = "auto"; // Enable scrolling
+});
+
+</script>
+
 

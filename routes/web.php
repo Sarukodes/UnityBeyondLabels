@@ -71,6 +71,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
    });
    Route::prefix('contact')->name('contact.')->group(function(){
     Route::get('', [ContactController::class,'index'])->name('index');
+    Route::get('/contactList', [ContactController::class,'contactList'])->name('contactList');
+    Route::get('delete/{contactForm}', [ContactController::class,'delete'])->name('delete');
     Route::match(['GET','POST'], 'add', [ContactController::class, 'add'])->name('add');
     Route::match(['GET','POST'], 'edit/{contact}', [ContactController::class, 'edit'])->name('edit');
     Route::get('del/{contact}',[ContactController::class, 'del'])->name('del');
@@ -81,7 +83,6 @@ Route::name('front')->name('front.')->group(function () {
     Route::get('/events', [HomeController::class, 'events'])->name('events');
     Route::get('/news/{id}', [HomeController::class, 'news'])->name('news');
     Route::get('/contact',[HomeController::class, 'contact'])->name(('contact'));
-    Route::get('contact/add',[ContactFormController::class,'add']);
     Route::post('/contact/save', [ContactFormController::class, 'save'])->name('contact.save');
     Route::get('/donation', [HomeController::class,'donation'])->name('donation');
 });

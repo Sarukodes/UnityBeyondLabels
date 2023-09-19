@@ -20,9 +20,9 @@
 @endsection
 
 @section('scripts')
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            $('#carousel').carousel();
-        });
-
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        $('#carousel').carousel();
+    });
+</script>
 @endsection

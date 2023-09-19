@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Contact;
+use App\Models\ContactForm;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -48,5 +49,16 @@ class ContactController extends Controller
     {
     DB::table('contacts')->where('id', $contact)->delete();
     return redirect()->back();
+    }
+
+    public function contactlist()
+    {
+        $contactForms = ContactForm::all();
+        return view('back.contact.contactList',compact('contactForms'));
+    }
+    public function delete($id){
+        $contactForm = contactForm::where('id',$id)->first();
+        $contactForm->delete();
+        return redirect()->back();
     }
 }

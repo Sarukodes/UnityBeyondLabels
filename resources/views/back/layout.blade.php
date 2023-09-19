@@ -63,6 +63,12 @@
                             <span class="links_name">Contact </span>
                         </a>
                     </li>
+                     <li>
+                        <a href="{{ route('admin.contact.contactList') }}" class="">
+                            <i class="fa-regular fa-address-book me-2"></i>
+                            <span class="links_name">Contact List </span>
+                        </a>
+                    </li>
                     <li>
                         <a href="{{ route('admin.footer.index') }}" class="">
                             <i class="fa-solid fa-shoe-prints  me-2"></i>
@@ -95,7 +101,6 @@
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous">
     </script>
     @yield('scripts')
-
 </html>
 </body>
 
