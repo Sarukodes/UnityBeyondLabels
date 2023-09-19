@@ -25,7 +25,9 @@
                     <div class="content">{{ $contact->text }}</div>
                     <div class="box-holder">
                         <div class="box">
+                            <a href="tel:{{ $contact->Contactno }}">
                             <i class="fa-solid fa-mobile"></i>
+                            </a>
                             <p>{{ $contact->Contactno }}</p>
                         </div>
                         <div class="box">
@@ -33,7 +35,9 @@
                             <p>{{ $contact->address }}</p>
                         </div>
                         <div class="box">
+                            <a href="mailto:{{ $contact->gmail }}">
                             <i class="fa-solid fa-envelope-open-text"></i>
+                            </a>
                             <p>{{ $contact->gmail }}</p>
                         </div>
                     </div>

@@ -352,6 +352,9 @@
   margin-right: 100px;
   font-weight: 400;
 }
+.contacts a {
+  color: #a52070;
+}
 .contacts .line {
   width: 80%;
   height: 2.5px;
