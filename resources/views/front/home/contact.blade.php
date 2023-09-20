@@ -13,7 +13,7 @@
          rgba(30, 29, 29, 0.55),
          rgba(42, 41, 41, 0.406)
          ),url('https://cdn.pixabay.com/photo/2022/06/12/18/32/lovers-7258617_1280.jpg')">
-            <div class="text" style="font-size: 50px">Contact Page</div>
+            <div class="text" style="font-size: 50px">Contact</div>
         </div>
     </div>
     <div class="contacts">

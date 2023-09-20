@@ -1,4 +1,4 @@
-<div class="row me-0">
+<div class="row me-0 center-row">
     @foreach ($services as $key => $service)
         <div class="col-md-7">
             <div class="text m-0">

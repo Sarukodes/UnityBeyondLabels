@@ -360,11 +360,10 @@
   height: 2.5px;
   background: linear-gradient(to right, #546071 12%, #dadde1 10%, #dadde1 100%);
 }
-
-.box-holder {
+.contacts .box-holder {
   display: flex;
 }
-.box-holder .box {
+.contacts .box-holder .box {
   display: inline;
   justify-content: center;
   text-align: center;
@@ -378,50 +377,49 @@
   font-size: 45px;
   color: #a52070;
 }
-.box-holder .box p {
+.contacts .box-holder .box p {
   font-size: 15px;
   color: #647285;
   font-weight: 300;
 }
-
-.contact-form {
+.contacts .contact-form {
   border: 1px solid #1d2024;
   width: 410px;
   height: 492px;
   color: #ce3959;
   background-color: #1d2024;
 }
-.contact-form p {
+.contacts .contact-form p {
   font-size: 33px;
   font-weight: 500;
   text-align: center;
   margin-top: 35px;
 }
-.contact-form .line {
+.contacts .contact-form .line {
   margin-left: 95px;
   margin-bottom: 55px;
   width: 50%;
   height: 2.5px;
   background: linear-gradient(to left, #546071 12%, #ffffff 10%, #ffffff 100%);
 }
-.contact-form .form-group {
+.contacts .contact-form .form-group {
   margin: 40px;
   margin: 20px;
   margin-left: 70px;
   margin-right: 70px;
 }
-.contact-form .submit {
+.contacts .contact-form .submit {
   border: 1px solid black;
   margin-left: 65px;
   margin-top: 20px;
-  background-color: #CE3959;
+  background-color: #ce3959;
   color: white;
   border-radius: 30px;
   height: 40px;
   width: 100px;
   font-weight: 300;
 }
-.contact-form .submit:hover {
+.contacts .contact-form .submit:hover {
   border: 1px solid white;
   color: white;
   background-color: #1d2024;
@@ -503,85 +501,22 @@
   .services .logo {
     margin-top: 0;
   }
-  .services .box {
+  .services .logo .box {
     border: 1px solid #f3f3f3;
     height: 150px;
     width: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    margin: 15px;
     font-size: 21px;
     font-weight: 300;
+    margin-left: 0;
   }
-  .services .box img {
+  .services .logo .box img {
     width: 70px;
     margin-left: 15px;
   }
-  .services .box:hover {
+  .services .logo .box:hover {
     background-color: #ce3959;
     color: white;
-  }
-  .news {
-    padding-top: 70px;
-    text-align: center;
-    margin-bottom: 50px;
-  }
-  .news .cursive {
-    font-family: cursive;
-    font-size: 20px;
-    font-weight: 200;
-  }
-  .news .event {
-    margin-top: -25px;
-    font-size: 60px;
-    font-weight: bold;
-    color: #ce3959;
-    margin-bottom: 70px;
-  }
-  .news .news-holder {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    text-align: left;
-  }
-  .news .news-holder .event-box {
-    border: 1px solid #f3f3f3;
-    width: 90%;
-    height: 500px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 50px;
-  }
-  .news .news-holder .event-box:hover {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  }
-  .news .news-holder .event-box .news-image {
-    width: 100%;
-  }
-  .news .news-holder .event-box .text {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 50px;
-  }
-  .news .news-holder .event-box .text .title {
-    font-size: 18px;
-    font-weight: 500;
-  }
-  .news .news-holder .event-box .text .title:hover {
-    color: #ce3959;
-  }
-  .news .news-holder .event-box .text .content {
-    font-size: 15px;
-    color: #556172;
-  }
-  .news .news-holder .event-box .text .line {
-    width: 100%;
-    height: 2px;
-    margin-bottom: 50px;
-    background: linear-gradient(to right, #546071 12%, #dadde1 10%, #dadde1 100%);
   }
   .events .event-container .image img {
     width: 280px;
@@ -591,11 +526,9 @@
     font-size: 10px;
   }
   .donation .image-container {
-    margin-bottom: 50px;
-    margin-top: 90px;
-  }
-  .donation .image-container .text {
-    margin-left: -20px;
+    margin-bottom: 70px;
+    margin-top: 150px;
+    text-align: center;
   }
   .donation .image-container .text .donation-text {
     text-align: center;
@@ -604,16 +537,56 @@
     margin-bottom: 20px;
     margin-top: -80px;
   }
-  .donation .image-container .text .image {
-    padding-bottom: 20px;
-  }
   .donation .image-container .text .image img {
     width: 100px;
-    padding-left: 20px;
+    margin-left: 120px;
   }
   .donation .image-container .text .goal {
-    margin-top: -50px;
-    margin-left: -70px;
+    margin-top: -60px;
+    margin-left: -33px;
+  }
+  .contacts {
+    margin-left: 30px;
+  }
+  .contacts .box-holder .box {
+    padding-top: 0;
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  .contacts .box-holder .box p {
+    font-size: 10px;
+  }
+  .contacts .contact-form {
+    width: 330px;
+    height: 492px;
+    align-items: center;
+    margin-bottom: 0px;
+  }
+  .contacts .contact-form .submit {
+    height: 40px;
+    width: 120px;
+  }
+  .showdonation .image-container {
+    margin-bottom: 70px;
+    text-align: center;
+  }
+  .showdonation .image-container .text .donation-text {
+    text-align: center;
+    border-right: none;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    margin-top: -80px;
+  }
+  .showdonation .image-container .text .image img {
+    width: 80%;
+    margin-left: 70px;
+  }
+  .showdonation .image-container .text .goal {
+    margin-top: -60px;
+    margin-left: -33px;
   }
   .footer .contact {
     font-size: 16px;

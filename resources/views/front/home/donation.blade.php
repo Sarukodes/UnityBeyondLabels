@@ -14,7 +14,7 @@
             rgba(42, 41, 41, 0.406)
              ),url('https://cdn.pixabay.com/photo/2022/06/12/18/32/lovers-7258617_1280.jpg')">
 
-            <div class="text" style="font-size: 50px">Donate Now</div>
+            <div class="text" style="font-size: 50px">Donate </div>
         </div>
     </div>
     <div class="showdonation">
