@@ -311,7 +311,6 @@
         }
     }
 }
-
 .footer {
     background-color: #1d2024;
     color: white;
@@ -579,11 +578,29 @@
                 }
             }
             .texts {
+                margin-top: 15px;
+
                 .title {
-                    font-size: 10px;
+                    font-size: 5px;
+                }
+                .line{
+                       width: 100vh;
                 }
             }
         }
+        .custom-pagination{
+            margin-left: 50px;
+        }
+    }
+    .newsShow{
+ .selected-container{
+    .news-details {
+        margin-left:30px;
+        .title{
+            font-size: 20px;
+        }
+    }
+ }
     }
     .donation {
         .image-container {

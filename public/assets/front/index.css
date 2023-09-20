@@ -522,8 +522,23 @@
     width: 280px;
     margin-left: -50px;
   }
+  .events .event-container .texts {
+    margin-top: 15px;
+  }
   .events .event-container .texts .title {
-    font-size: 10px;
+    font-size: 5px;
+  }
+  .events .event-container .texts .line {
+    width: 100vh;
+  }
+  .events .custom-pagination {
+    margin-left: 50px;
+  }
+  .newsShow .selected-container .news-details {
+    margin-left: 30px;
+  }
+  .newsShow .selected-container .news-details .title {
+    font-size: 20px;
   }
   .donation .image-container {
     margin-bottom: 70px;
